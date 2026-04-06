@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maurice Wash Co. — Community. Convenience. Care.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal: #1a5f6a;
+      --rust: #c4541a;
+      --gold: #c9952a;
+      --navy: #1a2744;
+      --cream: #f5efe4;
+      --cream-dark: #ede4d3;
+      --text: #2a1f14;
+    }
+
+```
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--cream);
+  color: var(--text);
+  font-family: 'Libre Baskerville', serif;
+  overflow-x: hidden;
+}
+
+/* NOISE TEXTURE OVERLAY */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.4;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--navy);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 3px solid var(--gold);
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--cream);
+  letter-spacing: 0.05em;
+}
+
+.nav-logo span {
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cream);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(26,95,106,0.3) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 50%, rgba(196,84,26,0.2) 0%, transparent 60%);
+}
+
+.hero-badge {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.4rem 1.2rem;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 0.95;
+  margin-bottom: 1rem;
+  animation: fadeUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.hero h1 span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero-sub {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: rgba(245,239,228,0.7);
+  margin-bottom: 2.5rem;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+  opacity: 0;
+}
+
+.hero-tagline {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--rust);
+  animation: fadeUp 0.8s ease 0.6s forwards;
+  opacity: 0;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1.5rem auto;
+  animation: fadeUp 0.8s ease 0.5s forwards;
+  opacity: 0;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeUp 0.8s ease 1s forwards;
+  opacity: 0;
+}
+
+.scroll-indicator span {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,239,228,0.4);
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollPulse 2s ease infinite;
+}
+
+/* COMING SOON BANNER */
+.coming-soon {
+  background: var(--rust);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.coming-soon p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+
+/* SECTIONS */
+section {
+  padding: 6rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rust);
+  opacity: 0.3;
+  max-width: 60px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.section-title em {
+  color: var(--teal);
+  font-style: italic;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #4a3728;
+  max-width: 680px;
+}
+
+/* ABOUT */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-box {
+  background: var(--navy);
+  padding: 3rem;
+  position: relative;
+}
+
+.about-box::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid var(--gold);
+  pointer-events: none;
+}
+
+.about-box-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--cream);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.about-box-attr {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* SERVICES */
+.services-bg {
+  background: var(--navy);
+  padding: 6rem 2rem;
+}
+
+.services-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.services-inner .section-label { color: var(--gold); }
+.services-inner .section-label::after { background: var(--gold); }
+.services-inner .section-title { color: var(--cream); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  border: 1px solid rgba(201,149,42,0.3);
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.service-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.service-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: rgba(201,149,42,0.15);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  line-height: 1;
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--cream);
+  margin-bottom: 0.75rem;
+}
+
+.service-desc {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: rgba(245,239,228,0.6);
+}
+
+/* GIVING BACK */
+.giving-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.giving-highlight {
+  background: var(--teal);
+  padding: 3rem;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.giving-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  left: 10px;
+  top: 10px;
+  border: 2px solid var(--gold);
+  pointer-events: none;
+}
+
+.giving-highlight h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.giving-highlight p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(245,239,228,0.85);
+}
+
+.giving-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.giving-tag {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.3rem 0.8rem;
+}
+
+/* STORY */
+.story-bg {
+  background: var(--cream-dark);
+  padding: 6rem 2rem;
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
+}
+
+.story-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.story-left {
+  position: relative;
+}
+
+.story-stat {
+  margin-bottom: 2rem;
+}
+
+.story-stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: var(--rust);
+  line-height: 1;
+}
+
+.story-stat-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--navy);
+  opacity: 0.6;
+}
+
+.story-divider {
+  width: 40px;
+  height: 3px;
+  background: var(--gold);
+  margin: 1.5rem 0;
+}
+
+/* CONNECT */
+.connect-bg {
+  background: var(--navy);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.connect-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.connect-inner .section-label {
+  justify-content: center;
+  color: var(--gold);
+}
+
+.connect-inner .section-label::after { display: none; }
+
+.connect-inner .section-title {
+  color: var(--cream);
+}
+
+.connect-inner .section-text {
+  color: rgba(245,239,228,0.7);
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.connect-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.connect-item {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.connect-item span:first-child {
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  background: var(--rust);
+  color: var(--cream);
+  text-decoration: none;
+  border: 2px solid var(--rust);
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--rust);
+}
+
+/* FOOTER */
+footer {
+  background: #0f1825;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(201,149,42,0.2);
+}
+
+footer p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(245,239,228,0.3);
+}
+
+footer span { color: var(--gold); }
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-wrapper,
+  .giving-wrapper,
+  .story-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
+```
+
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+    <div class="nav-logo">Maurice <span>Wash Co.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#giving">Give Back</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+
+  <div class="hero">
+    <div class="hero-badge">Coming Soon — Maurice, Louisiana</div>
+    <h1>Maurice<br /><span>Wash Co.</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">A full laundry service built by this community,<br />for this community.</p>
+    <p class="hero-tagline">Community &nbsp;·&nbsp; Convenience &nbsp;·&nbsp; Care</p>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </div>
+
+  <!-- COMING SOON BANNER -->
+
+  <div class="coming-soon">
+    <p>Currently in pre-launch — Follow us on Facebook for updates</p>
+  </div>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+    <div class="about-wrapper">
+      <div>
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">Built for <em>Maurice.</em><br />Built for you.</h2>
+        <p class="section-text">
+          Maurice Wash Co. began the way most meaningful things do — with one woman who saw a need and decided to do something about it. We are currently in our pre-launch phase, working diligently to bring a much needed laundry service to Vermilion Parish.
+        </p>
+        <br />
+        <p class="section-text">
+          Families in Maurice and the surrounding community of Milton are leaving their community just to find a washateria. That's not a minor inconvenience — for working families, that's lost time and money they can't afford. Maurice Wash Co. is here to change that.
+        </p>
+      </div>
+      <div class="about-visual">
+        <div class="about-box">
+          <p class="about-box-quote">"For me, community means showing up, filling gaps, and making sure people don't fall through the cracks."</p>
+          <p class="about-box-attr">— Founder, Maurice Wash Co.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+
+  <div class="services-bg" id="services">
+    <div class="services-inner">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title" style="color: var(--cream);">Laundry done <em style="color: var(--gold);">your way.</em></h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <div class="service-icon">🧺</div>
+          <h3 class="service-title">Wash & Fold</h3>
+          <p class="service-desc">Drop off your laundry and let us handle the rest. We wash, dry, and fold everything neatly so you can focus on what matters most.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <div class="service-icon">⚙️</div>
+          <h3 class="service-title">Self-Service</h3>
+          <p class="service-desc">Prefer to do it yourself? Our self-service options give you access to high-efficiency machines in a clean, comfortable environment.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <div class="service-icon">🚗</div>
+          <h3 class="service-title">Pick Up & Delivery</h3>
+          <p class="service-desc">We come to you. Schedule a pick up and we will handle everything — washed, folded, and delivered right back to your door.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GIVING BACK -->
+
+  <section id="giving">
+    <div class="giving-wrapper">
+      <div>
+        <div class="section-label">Giving Back</div>
+        <h2 class="section-title">More than <em>laundry.</em></h2>
+        <p class="section-text">
+          At Maurice Wash Co. giving back is not an afterthought — it is built into who we are. Because basic needs matter. And no one should have to go without.
+        </p>
+        <br />
+        <p class="section-text">
+          Every month we host a community giveaway awarding two deserving community members with either three free self-service washes or two free wash and fold services.
+        </p>
+      </div>
+      <div>
+        <div class="giving-highlight">
+          <h3>The Fresh Start Program</h3>
+          <p>Our Fresh Start community program is dedicated to supporting those who need it most in Vermilion Parish — from day one.</p>
+          <div class="giving-tags">
+            <span class="giving-tag">Veterans</span>
+            <span class="giving-tag">Single Mothers</span>
+            <span class="giving-tag">The Disabled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+
+  <div class="story-bg" id="story">
+    <div class="story-inner">
+      <div class="story-left">
+        <div class="story-stat">
+          <div class="story-stat-number">11</div>
+          <div class="story-stat-label">Miles to nearest washateria</div>
+        </div>
+        <div class="story-divider"></div>
+        <div class="story-stat">
+          <div class="story-stat-number">0</div>
+          <div class="story-stat-label">Washateria competition in Maurice</div>
+        </div>
+        <div class="story-divider"></div>
+        <div class="story-stat">
+          <div class="story-stat-number">∞</div>
+          <div class="story-stat-label">Commitment to this community</div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">Rooted in <em>community.</em></h2>
+        <p class="section-text">
+          Maurice Wash Co. was founded by a woman deeply rooted in community service. As a CASA volunteer — a Court Appointed Special Advocate for children in the welfare system — and someone who has spent years as an autism advocate, this business is a natural extension of that commitment.
+        </p>
+        <br />
+        <p class="section-text">
+          For me, community means showing up, filling gaps, and making sure people don't fall through the cracks. Maurice Wash Co. is built on that same belief.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONNECT -->
+
+  <div class="connect-bg" id="connect">
+    <div class="connect-inner">
+      <div class="section-label">Stay Connected</div>
+      <h2 class="section-title">Follow our <em style="color: var(--gold);">journey.</em></h2>
+      <p class="section-text">
+        We are currently in our pre-launch phase and working hard to make Maurice Wash Co. a reality for Vermilion Parish. Follow us on Facebook for updates and be the first to know when we open our doors.
+      </p>
+      <div class="connect-details">
+        <div class="connect-item"><span>📍</span><span>Maurice, Louisiana — Vermilion Parish</span></div>
+        <div class="connect-item"><span>📘</span><span>Facebook: Maurice Wash Co.</span></div>
+      </div>
+      <a href="https://www.facebook.com" target="_blank" class="btn">Follow Us on Facebook</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>© 2026 <span>Maurice Wash Co.</span> &nbsp;·&nbsp; Community. Convenience. Care. &nbsp;·&nbsp; Maurice, Louisiana</p>
+  </footer>
+
+</body>
+</html>
