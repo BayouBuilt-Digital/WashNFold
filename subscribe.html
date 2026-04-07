@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laundry Subscription Plans in Maurice, LA | C'est Bon Laundry</title>
+  <meta name="description" content="Activate a C'est Bon Laundry subscription and save on wash &amp; fold and pick up &amp; delivery in Maurice, Louisiana. Monthly plans with Apple Pay, Google Pay, and Square." />
+  <meta name="keywords" content="laundry subscription Maurice LA, monthly laundry plan Vermilion Parish, laundry membership Maurice Louisiana" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="C'est Bon Laundry" />
+  <meta property="og:title" content="Laundry Subscription Plans | C'est Bon Laundry — Maurice, LA" />
+  <meta property="og:description" content="Save on laundry with a monthly subscription from C'est Bon Laundry in Maurice, Louisiana. Wash &amp; fold and pick up &amp; delivery plans available." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Laundry Subscription Plans | C'est Bon Laundry — Maurice, LA" />
+  <meta name="twitter:description" content="Monthly laundry subscription plans in Maurice, Louisiana. Save on wash &amp; fold and pick up &amp; delivery." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">C'est Bon <span>Laundry</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#giving">Give Back</a></li>
+      <li><a href="index.html#story">Our Story</a></li>
+      <li><a href="index.html#connect">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="service-number-bg" style="font-size: clamp(6rem, 18vw, 14rem); opacity: 0.04;">$</div>
+    <div class="page-hero-inner">
+      <div class="section-label" style="color: var(--gold);">Subscription Plans</div>
+      <h1 class="page-hero-title">Activate Your <em>Plan</em></h1>
+      <div class="hero-divider"></div>
+      <p class="page-hero-sub">Secure checkout powered by Square.</p>
+    </div>
+  </div>
+
+  <!-- PLAN SUMMARY -->
+  <section class="service-page-section">
+    <div class="service-page-wrapper">
+      <div>
+        <div class="section-label">What You're Getting</div>
+        <h2 class="section-title">Monthly service, <em>simplified.</em></h2>
+        <p class="section-text">
+          Your subscription gives you recurring laundry service at a reduced monthly rate — no contracts, no hassle. Everything is billed automatically through Square so you never have to think about it.
+        </p>
+        <br />
+        <p class="section-text">
+          Not sure which plan is right for you? Review our service pages and come back here when you're ready.
+        </p>
+        <br />
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="wash-and-fold.html#plans" class="btn">Wash &amp; Fold Plans</a>
+          <a href="pick-up-and-delivery.html#plans" class="btn">Pickup &amp; Delivery Plans</a>
+        </div>
+      </div>
+      <div>
+        <div class="service-page-steps">
+          <div class="service-step">
+            <div class="service-step-num">1</div>
+            <div>
+              <h4>Choose Your Plan</h4>
+              <p>Select the subscription tier that fits your household from the payment form below.</p>
+            </div>
+          </div>
+          <div class="service-step">
+            <div class="service-step-num">2</div>
+            <div>
+              <h4>Pay Securely</h4>
+              <p>Complete checkout through Square using a card, Apple Pay, or Google Pay.</p>
+            </div>
+          </div>
+          <div class="service-step">
+            <div class="service-step-num">3</div>
+            <div>
+              <h4>You're All Set</h4>
+              <p>We'll reach out to confirm your schedule and get your first service on the books.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAYMENT -->
+  <div class="payment-bg" id="payment">
+    <div class="payment-inner">
+      <div class="section-label">Secure Checkout</div>
+      <h2 class="section-title">Complete your <em>subscription.</em></h2>
+      <p class="section-text">All payments are processed securely through Square. We accept the following payment methods:</p>
+
+      <div class="payment-methods">
+        <div class="payment-badge payment-badge-sq">
+          <span class="pay-icon-sq">&#9632;</span> Square
+        </div>
+        <div class="payment-badge payment-badge-apple">
+          Apple Pay
+        </div>
+        <div class="payment-badge payment-badge-google">
+          <span class="pay-g">G</span>oogle Pay
+        </div>
+      </div>
+
+      <div class="square-payment-wrap">
+        <p class="payment-placeholder-note">Online subscriptions activate at launch.</p>
+        <p class="payment-placeholder-sub">Drop your email below and we'll notify you the moment subscriptions go live — be first in line to lock in your plan.</p>
+        <form class="notify-form" data-form-id="YOUR_NOTIFY_FORM_ID" onsubmit="handleNotifySubmit(event)">
+          <input type="email" name="email" placeholder="your@email.com" required class="notify-input" />
+          <button type="submit" class="btn">Notify Me at Launch</button>
+        </form>
+        <p class="payment-placeholder-sub" style="margin-top: 2rem;">Prefer to call? <a href="tel:5550000000" style="color: var(--gold); text-decoration: none;">(555) 000-0000</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-phone"><a href="tel:5550000000">(555) 000-0000</a></p>
+    <p>© 2026 <span>C'est Bon Laundry</span> &nbsp;·&nbsp; Community. Convenience. Care. &nbsp;·&nbsp; Maurice, Louisiana</p>
+    <p class="footer-credit">Site by <a href="mailto:hello@bayoubuiltdigital.com">BayouBuilt Digital</a></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

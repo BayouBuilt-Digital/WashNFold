@@ -4,7 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fresh Start Program — Maurice Wash Co.</title>
+  <title>Fresh Start Program | Free Laundry for Vermilion Parish | C'est Bon Laundry</title>
+  <meta name="description" content="The Fresh Start Program by C'est Bon Laundry supports veterans, single mothers, elderly, and disabled residents in Vermilion Parish with free laundry services. Nominate someone today." />
+  <meta name="keywords" content="Fresh Start Program Maurice LA, free laundry Vermilion Parish, community laundry program Louisiana, laundry assistance Maurice" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="C'est Bon Laundry" />
+  <meta property="og:title" content="Fresh Start Program | C'est Bon Laundry — Maurice, LA" />
+  <meta property="og:description" content="Supporting veterans, single mothers, elderly, and disabled residents in Vermilion Parish with free laundry services. Nominate someone deserving today." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Fresh Start Program | C'est Bon Laundry — Maurice, LA" />
+  <meta name="twitter:description" content="Free laundry services for veterans, single mothers, elderly, and disabled residents in Vermilion Parish. Nominate someone today." />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"NGO","name":"Fresh Start Program","description":"A community program by C'est Bon Laundry providing free laundry services to veterans, single mothers, elderly, and disabled residents in Vermilion Parish, Louisiana.","parentOrganization":{"@type":"LocalBusiness","name":"C'est Bon Laundry","address":{"@type":"PostalAddress","addressLocality":"Maurice","addressRegion":"LA","addressCountry":"US"}},"areaServed":"Vermilion Parish, Louisiana"}
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -12,7 +25,10 @@
 
   <!-- NAV -->
   <nav>
-    <a href="index.html" class="nav-logo">Maurice <span>Wash Co.</span></a>
+    <a href="index.html" class="nav-logo">C'est Bon <span>Laundry</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#services">Services</a></li>
@@ -29,7 +45,7 @@
       <div class="section-label" style="color: var(--gold);">Give Back</div>
       <h1 class="page-hero-title">Fresh Start <em>Program</em></h1>
       <div class="hero-divider"></div>
-      <p class="page-hero-sub">Community. Dignity. Care.</p>
+      <p class="hero-tagline">Community &nbsp;·&nbsp; Dignity &nbsp;·&nbsp; Care</p>
     </div>
   </div>
 
@@ -40,7 +56,7 @@
         <div class="section-label">About the Program</div>
         <h2 class="section-title">More than <em>laundry.</em></h2>
         <p class="section-text">
-          The Fresh Start Program is our way of giving back to the people who make this community what it is. Every month, Maurice Wash Co. awards two deserving community members with free laundry services — no strings attached.
+          The Fresh Start Program is our way of giving back to the people who make this community what it is. Every month, C'est Bon Laundry awards two deserving community members with free laundry services — no strings attached.
         </p>
         <br />
         <p class="section-text">
@@ -98,32 +114,53 @@
 
       <div class="fsp-form-wrap">
         <div class="section-label" style="color: var(--gold); justify-content: center;">Nomination Form</div>
-        <p style="color: rgba(245,239,228,0.7); font-size: 0.95rem; line-height: 1.8; margin-top: 1rem; margin-bottom: 2rem;">
-          Download the nomination form below, fill it out, and upload it to submit your entry. Two winners are selected each month.
+        <p style="color: rgba(245,239,228,0.7); font-size: 0.95rem; line-height: 1.8; margin-top: 1rem; margin-bottom: 2.5rem;">
+          Fill out the form below and click Submit to enter. Two winners are selected each month.
         </p>
 
-        <div class="fsp-download-upload">
-          <div class="fsp-step-card">
-            <div class="fsp-step-num">1</div>
-            <h4>Download the Form</h4>
-            <p>Save the form to your device and fill it out — by hand or on your computer.</p>
-            <a href="fresh-start-nomination.docx" download class="btn fsp-dl-btn">Download Form</a>
+        <form class="fsp-inline-form" data-form-id="YOUR_NOMINATION_FORM_ID" onsubmit="handleFormSubmit(event, 'nom-submit-btn', 'Nomination submitted — thank you for making a difference!')">
+
+          <div class="fsp-field">
+            <label class="fsp-label" for="nom-name">1. Your Name</label>
+            <input class="fsp-input" type="text" id="nom-name" name="your_name" required />
           </div>
 
-          <div class="fsp-step-divider">→</div>
-
-          <div class="fsp-step-card">
-            <div class="fsp-step-num">2</div>
-            <h4>Upload Your Completed Form</h4>
-            <p>Once filled out, upload your form here to submit your nomination.</p>
-            <label class="fsp-upload-label">
-              <input type="file" id="fsp-upload" accept=".docx,.pdf,.doc" />
-              <span class="btn fsp-ul-btn">Choose File</span>
-            </label>
-            <p class="fsp-upload-filename" id="fsp-filename">No file chosen</p>
-            <button class="btn fsp-submit-btn" onclick="document.getElementById('fsp-filename').textContent === 'No file chosen' ? null : alert('Thank you! Your nomination has been submitted.')">Submit Nomination</button>
+          <div class="fsp-field">
+            <label class="fsp-label" for="nom-phone">2. Phone Number</label>
+            <input class="fsp-input" type="tel" id="nom-phone" name="phone" required />
           </div>
-        </div>
+
+          <div class="fsp-field">
+            <label class="fsp-label" for="nom-email">3. Email Address</label>
+            <input class="fsp-input" type="email" id="nom-email" name="email" required />
+          </div>
+
+          <div class="fsp-field">
+            <span class="fsp-label">4. Category <span class="fsp-hint">(check one)</span></span>
+            <div class="fsp-radio-group">
+              <label class="fsp-radio-label"><input type="radio" name="category" value="Veteran" required /> Veteran</label>
+              <label class="fsp-radio-label"><input type="radio" name="category" value="Single Mother" /> Single Mother</label>
+              <label class="fsp-radio-label"><input type="radio" name="category" value="Elderly" /> Elderly</label>
+              <label class="fsp-radio-label"><input type="radio" name="category" value="Disabled" /> Disabled</label>
+              <label class="fsp-radio-label"><input type="radio" name="category" value="Other" /> Other</label>
+            </div>
+          </div>
+
+          <div class="fsp-field">
+            <label class="fsp-label" for="nom-nominee">5. Nominee Name</label>
+            <span class="fsp-field-hint">Leave blank if nominating yourself.</span>
+            <input class="fsp-input" type="text" id="nom-nominee" name="nominee_name" />
+          </div>
+
+          <div class="fsp-field">
+            <label class="fsp-label" for="nom-story">6. Tell Us Their Story</label>
+            <span class="fsp-field-hint">Why do they deserve a Fresh Start? Please write at least a few sentences.</span>
+            <textarea class="fsp-textarea" id="nom-story" name="story" rows="8" required></textarea>
+          </div>
+
+          <button type="submit" id="nom-submit-btn" class="btn fsp-submit-btn">Submit Nomination</button>
+
+        </form>
       </div>
 
     </div>
@@ -145,14 +182,14 @@
         <div class="rule-num">02</div>
         <div class="rule-text">
           <h4>How to Enter</h4>
-          <p>Download and complete the official nomination form. Nominations may be submitted on behalf of yourself or another qualifying community member. Only one nomination per person per month will be accepted.</p>
+          <p>Complete the official nomination form. Nominations may be submitted on behalf of yourself or another qualifying community member. Only one nomination per person per month will be accepted.</p>
         </div>
       </div>
       <div class="rule-item">
         <div class="rule-num">03</div>
         <div class="rule-text">
           <h4>Winner Selection</h4>
-          <p>The owners of Maurice Wash Co. will choose two lucky winners each month. Selections are made at the sole discretion of ownership and are based on demonstrated need and community spirit as described in the nomination. All decisions are final. The same individual may not be chosen as a winner more than once every year.</p>
+          <p>The owners of C'est Bon Laundry will choose two lucky winners each month. Selections are made at the sole discretion of ownership and are based on demonstrated need and community spirit as described in the nomination. All decisions are final. The same individual may not be chosen as a winner more than once every year.</p>
         </div>
       </div>
       <div class="rule-item">
@@ -173,21 +210,21 @@
         <div class="rule-num">06</div>
         <div class="rule-text">
           <h4>Publicity &amp; Consent</h4>
-          <p>By accepting the prize, contest winners agree to have their name, photo, and story published on Maurice Wash Co.'s social media channels and website. This helps us celebrate our community and inspire others. Participation in publicity is a condition of accepting the prize.</p>
+          <p>By accepting the prize, contest winners agree to have their name, photo, and story published on C'est Bon Laundry's social media channels and website. This helps us celebrate our community and inspire others. Participation in publicity is a condition of accepting the prize.</p>
         </div>
       </div>
       <div class="rule-item">
         <div class="rule-num">07</div>
         <div class="rule-text">
           <h4>Privacy</h4>
-          <p>All nomination information is kept strictly confidential and will only be used for the purpose of the Fresh Start Program. Maurice Wash Co. will not share personal information with third parties.</p>
+          <p>All nomination information is kept strictly confidential and will only be used for the purpose of the Fresh Start Program. C'est Bon Laundry will not share personal information with third parties.</p>
         </div>
       </div>
       <div class="rule-item">
         <div class="rule-num">08</div>
         <div class="rule-text">
           <h4>General</h4>
-          <p>Maurice Wash Co. reserves the right to modify, suspend, or discontinue the Fresh Start Program at any time. Employees and immediate family members of Maurice Wash Co. are not eligible to participate.</p>
+          <p>C'est Bon Laundry reserves the right to modify, suspend, or discontinue the Fresh Start Program at any time. Employees and immediate family members of C'est Bon Laundry are not eligible to participate.</p>
         </div>
       </div>
     </div>
@@ -195,14 +232,11 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 <span>Maurice Wash Co.</span> &nbsp;·&nbsp; Community. Convenience. Care. &nbsp;·&nbsp; Maurice, Louisiana</p>
+    <p class="footer-phone"><a href="tel:5550000000">(555) 000-0000</a></p>
+    <p>© 2026 <span>C'est Bon Laundry</span> &nbsp;·&nbsp; Community. Convenience. Care. &nbsp;·&nbsp; Maurice, Louisiana</p>
+    <p class="footer-credit">Site by <a href="mailto:hello@bayoubuiltdigital.com">BayouBuilt Digital</a></p>
   </footer>
 
-  <script>
-    document.getElementById('fsp-upload').addEventListener('change', function () {
-      const name = this.files[0] ? this.files[0].name : 'No file chosen';
-      document.getElementById('fsp-filename').textContent = name;
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

@@ -4,7 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wash & Fold — Maurice Wash Co.</title>
+  <title>Wash &amp; Fold Laundry Service in Maurice, LA | C'est Bon Laundry</title>
+  <meta name="description" content="Drop off your laundry and let us handle the rest. Professional wash &amp; fold service in Maurice, Louisiana — washed, dried, and folded neatly. Subscription plans available." />
+  <meta name="keywords" content="wash and fold Maurice LA, laundry drop off Vermilion Parish, wash fold laundry service Maurice Louisiana" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="C'est Bon Laundry" />
+  <meta property="og:title" content="Wash &amp; Fold Laundry Service | C'est Bon Laundry — Maurice, LA" />
+  <meta property="og:description" content="Drop off your laundry and we handle the rest. Professional wash &amp; fold in Maurice, Louisiana with subscription plans available." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Wash &amp; Fold | C'est Bon Laundry — Maurice, LA" />
+  <meta name="twitter:description" content="Professional wash &amp; fold laundry service in Maurice, Louisiana. Affordable rates and subscription plans." />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"Wash & Fold Laundry Service","serviceType":"Laundry Service","description":"Drop off your laundry and let us wash, dry, and fold everything neatly. Subscription plans available.","provider":{"@type":"LocalBusiness","name":"C'est Bon Laundry","address":{"@type":"PostalAddress","addressLocality":"Maurice","addressRegion":"LA","addressCountry":"US"}},"areaServed":"Vermilion Parish, Louisiana"}
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -12,7 +25,10 @@
 
   <!-- NAV -->
   <nav>
-    <a href="index.html" class="nav-logo">Maurice <span>Wash Co.</span></a>
+    <a href="index.html" class="nav-logo">C'est Bon <span>Laundry</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#services">Services</a></li>
@@ -55,7 +71,7 @@
             <div class="service-step-num">1</div>
             <div>
               <h4>Drop Off</h4>
-              <p>Bring your laundry to Maurice Wash Co. during business hours.</p>
+              <p>Bring your laundry to C'est Bon Laundry during business hours.</p>
             </div>
           </div>
           <div class="service-step">
@@ -141,14 +157,14 @@
             <span class="hours-time-val">8:00 am – 6:00 pm</span>
           </div>
         </div>
-        <p class="hours-disclaimer">Hours are subject to change. Follow us on Facebook for holiday hours and updates.</p>
+        <p class="hours-disclaimer">Hours are subject to change. Follow us on Facebook and Instagram for holiday hours and updates.</p>
       </div>
 
     </div>
   </div>
 
   <!-- SUBSCRIPTION PLANS -->
-  <div class="subscription-bg">
+  <div class="subscription-bg" id="plans">
     <div class="subscription-inner">
       <div class="section-label" style="color: var(--gold);">Subscription Plans</div>
       <h2 class="section-title" style="color: var(--cream);">Save more, <em style="color: var(--gold);">every month.</em></h2>
@@ -165,7 +181,7 @@
             <li>Wash, dry &amp; fold included</li>
             <li>No contracts — cancel anytime</li>
           </ul>
-          <a href="index.html#connect" class="service-btn">Get Started</a>
+          <a href="subscribe.html" class="service-btn">Activate</a>
         </div>
 
         <div class="sub-card sub-card-featured">
@@ -179,7 +195,7 @@
             <li>Wash, dry &amp; fold included</li>
             <li>No contracts — cancel anytime</li>
           </ul>
-          <a href="index.html#connect" class="service-btn sub-btn-featured">Get Started</a>
+          <a href="subscribe.html" class="service-btn sub-btn-featured">Activate</a>
         </div>
 
         <div class="sub-card">
@@ -192,7 +208,7 @@
             <li>Wash, dry &amp; fold included</li>
             <li>No contracts — cancel anytime</li>
           </ul>
-          <a href="index.html#connect" class="service-btn">Get Started</a>
+          <a href="subscribe.html" class="service-btn">Activate</a>
         </div>
 
       </div>
@@ -217,7 +233,14 @@
           <div class="service-icon">🚗</div>
           <h3 class="service-title">Pick Up & Delivery</h3>
           <p class="service-desc">We come to you. Washed, folded, and delivered right back to your door.</p>
-          <a href="pick-up-and-delivery.html" class="service-btn">Machine Rates</a>
+          <a href="pick-up-and-delivery.html" class="service-btn">Pickup Pricing</a>
+        </div>
+        <div class="service-card">
+          <div class="service-number">04</div>
+          <div class="service-icon">🏢</div>
+          <h3 class="service-title">Commercial Service</h3>
+          <p class="service-desc">Laundry solutions for daycares, restaurants, gyms, and more. Wash & Fold and Pick Up & Delivery available for businesses.</p>
+          <a href="commercial.html" class="service-btn">Call for Pricing</a>
         </div>
       </div>
     </div>
@@ -225,8 +248,11 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 <span>Maurice Wash Co.</span> &nbsp;·&nbsp; Community. Convenience. Care. &nbsp;·&nbsp; Maurice, Louisiana</p>
+    <p class="footer-phone"><a href="tel:5550000000">(555) 000-0000</a></p>
+    <p>© 2026 <span>C'est Bon Laundry</span> &nbsp;·&nbsp; Community. Convenience. Care. &nbsp;·&nbsp; Maurice, Louisiana</p>
+    <p class="footer-credit">Site by <a href="mailto:hello@bayoubuiltdigital.com">BayouBuilt Digital</a></p>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
