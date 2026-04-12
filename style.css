@@ -1159,11 +1159,6 @@ section {
     background: var(--gold);
 }
 
-.gc-card-visual--physical {
-    background: linear-gradient(135deg, #0d2233 0%, #1a4050 45%, #0f3040 100%);
-    border-color: rgba(255,209,102,0.5);
-}
-
 /* Decorative rings */
 .gc-card-deco-ring {
     position: absolute;
