@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;family=Nunito:wght@300&amp;display=swap');
+  </style>
+  <!-- Decorative bubble accents -->
+  <circle cx="28" cy="22" r="7" fill="#00b4d8" opacity="0.25"/>
+  <circle cx="14" cy="42" r="4.5" fill="#ffd166" opacity="0.2"/>
+  <circle cx="396" cy="18" r="5.5" fill="#ffd166" opacity="0.2"/>
+  <circle cx="406" cy="36" r="3.5" fill="#00b4d8" opacity="0.2"/>
+  <!-- Brand name -->
+  <text x="210" y="60" text-anchor="middle"
+        font-family="'Dancing Script', cursive" font-weight="700"
+        font-size="56" fill="#f8f9fa">FreshNFold</text>
+  <!-- Laundry subtitle (much smaller) -->
+  <text x="210" y="90" text-anchor="middle"
+        font-family="'Nunito', sans-serif" font-weight="300"
+        font-size="14" letter-spacing="10" fill="#ffd166">LAUNDRY</text>
+</svg>
