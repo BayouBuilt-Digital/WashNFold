@@ -1,18 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;family=Nunito:wght@300&amp;display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&amp;display=swap');
   </style>
-  <!-- Decorative bubble accents -->
-  <circle cx="28" cy="22" r="7" fill="#00b4d8" opacity="0.25"/>
-  <circle cx="14" cy="42" r="4.5" fill="#ffd166" opacity="0.2"/>
-  <circle cx="396" cy="18" r="5.5" fill="#ffd166" opacity="0.2"/>
-  <circle cx="406" cy="36" r="3.5" fill="#00b4d8" opacity="0.2"/>
-  <!-- Brand name -->
-  <text x="210" y="60" text-anchor="middle"
-        font-family="'Dancing Script', cursive" font-weight="700"
-        font-size="56" fill="#f8f9fa">FreshNFold</text>
+  <!-- "Fresh" in sky blue -->
+  <text x="148" y="62" text-anchor="end"
+        font-family="'Nunito', sans-serif" font-weight="800"
+        font-size="54" fill="#64B5F6">Fresh</text>
+  <!-- "NFold" in lime green -->
+  <text x="150" y="62" text-anchor="start"
+        font-family="'Nunito', sans-serif" font-weight="800"
+        font-size="54" fill="#7CC444">NFold</text>
   <!-- Laundry subtitle (much smaller) -->
   <text x="210" y="90" text-anchor="middle"
-        font-family="'Nunito', sans-serif" font-weight="300"
-        font-size="14" letter-spacing="10" fill="#ffd166">LAUNDRY</text>
+        font-family="'Nunito', sans-serif" font-weight="400"
+        font-size="14" letter-spacing="8" fill="#6B7280">LAUNDRY</text>
 </svg>
