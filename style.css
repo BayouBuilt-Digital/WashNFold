@@ -1121,15 +1121,18 @@ section {
 
 .gc-option-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 3rem;
     margin-top: 3.5rem;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gc-option-card {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
     transition: transform 0.35s;
 }
 
@@ -1143,12 +1146,13 @@ section {
     aspect-ratio: 1.586 / 1;
     background: linear-gradient(135deg, #3D8BD4 0%, var(--navy) 45%, #5AAFE8 100%);
     border: 1px solid rgba(124,196,68,0.55);
-    padding: 1.6rem 2rem;
+    padding: 1.2rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    box-shadow: 0 24px 60px rgba(0,0,0,0.28), 0 6px 20px rgba(124,196,68,0.12);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15), 0 4px 12px rgba(124,196,68,0.08);
+    border-radius: 12px;
 }
 
 .gc-card-visual::before {
