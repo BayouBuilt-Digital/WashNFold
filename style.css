@@ -1,13 +1,13 @@
 :root {
-    --teal: #1a5f6a;
-    --rust: #c4541a;
-    --gold: #c9952a;
-    --navy: #1a2744;
-    --navy-deep: #0f1825;
-    --cream: #f5efe4;
-    --cream-dark: #ede4d3;
-    --text: #2a1f14;
-    --text-warm: var(--text-warm);
+    --teal: #00b4d8;
+    --rust: #ff6b6b;
+    --gold: #ffd166;
+    --navy: #1d3557;
+    --navy-deep: #0d1b2a;
+    --cream: #f8f9fa;
+    --cream-dark: #e9ecef;
+    --text: #2b2d42;
+    --text-warm: #495057;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -17,7 +17,7 @@ html { scroll-behavior: smooth; }
 body {
     background-color: var(--cream);
     color: var(--text);
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
 }
 
@@ -47,14 +47,14 @@ nav {
 }
 
 .nav-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    color: var(--cream);
-    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-.nav-logo span {
-    color: var(--gold);
+.nav-logo-img {
+    height: 38px;
+    width: auto;
 }
 
 .nav-links {
@@ -64,7 +64,7 @@ nav {
 }
 
 .nav-links a {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -93,12 +93,12 @@ nav {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 30% 50%, rgba(26,95,106,0.3) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 50%, rgba(196,84,26,0.2) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 30% 50%, rgba(0,180,216,0.25) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 50%, rgba(255,209,102,0.15) 0%, transparent 60%);
 }
 
 .hero-badge {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -111,33 +111,30 @@ nav {
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(3rem, 8vw, 7rem);
-    font-weight: 900;
-    color: var(--cream);
-    line-height: 0.95;
     margin-bottom: 1rem;
     animation: fadeUp 0.8s ease 0.2s forwards;
     opacity: 0;
+    line-height: 1;
 }
 
-.hero h1 span {
-    color: var(--gold);
-    font-style: italic;
+.hero-logo {
+    max-width: 500px;
+    width: 80vw;
+    height: auto;
 }
 
 .hero-sub {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-style: italic;
     font-size: clamp(1rem, 2vw, 1.4rem);
-    color: rgba(245,239,228,0.7);
+    color: rgba(248,249,250,0.7);
     margin-bottom: 2.5rem;
     animation: fadeUp 0.8s ease 0.4s forwards;
     opacity: 0;
 }
 
 .hero-tagline {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.85rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -169,11 +166,11 @@ nav {
 }
 
 .scroll-indicator span {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(245,239,228,0.4);
+    color: rgba(248,249,250,0.4);
 }
 
 .scroll-line {
@@ -191,7 +188,7 @@ nav {
 }
 
 .coming-soon p {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -201,7 +198,7 @@ nav {
 .coming-soon-link {
     color: var(--cream);
     text-decoration: underline;
-    text-decoration-color: rgba(245,239,228,0.45);
+    text-decoration-color: rgba(248,249,250,0.45);
     text-underline-offset: 3px;
     transition: opacity 0.2s;
 }
@@ -216,7 +213,7 @@ section {
 }
 
 .section-label {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -237,7 +234,7 @@ section {
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     color: var(--navy);
@@ -287,7 +284,7 @@ section {
 }
 
 .about-box-quote {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-style: italic;
     font-size: 1.3rem;
     color: var(--cream);
@@ -296,7 +293,7 @@ section {
 }
 
 .about-box-attr {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -326,7 +323,7 @@ section {
 }
 
 .service-card {
-    border: 1px solid rgba(201,149,42,0.3);
+    border: 1px solid rgba(255,209,102,0.3);
     padding: 2.5rem 2rem;
     position: relative;
     transition: border-color 0.3s, transform 0.3s;
@@ -338,9 +335,9 @@ section {
 }
 
 .service-number {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 3rem;
-    color: rgba(201,149,42,0.15);
+    color: rgba(255,209,102,0.15);
     position: absolute;
     top: 1rem;
     right: 1.5rem;
@@ -353,7 +350,7 @@ section {
 }
 
 .service-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 1.3rem;
     color: var(--cream);
     margin-bottom: 0.75rem;
@@ -362,13 +359,13 @@ section {
 .service-desc {
     font-size: 0.9rem;
     line-height: 1.8;
-    color: rgba(245,239,228,0.6);
+    color: rgba(248,249,250,0.6);
     margin-bottom: 1.5rem;
 }
 
 .service-btn {
     display: inline-block;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -398,10 +395,10 @@ section {
 }
 
 .service-number-bg {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: clamp(8rem, 20vw, 16rem);
     font-weight: 900;
-    color: rgba(201,149,42,0.06);
+    color: rgba(255,209,102,0.06);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -417,7 +414,7 @@ section {
 }
 
 .page-hero-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 900;
     color: var(--cream);
@@ -431,10 +428,10 @@ section {
 }
 
 .page-hero-sub {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-style: italic;
     font-size: 1.1rem;
-    color: rgba(245,239,228,0.6);
+    color: rgba(248,249,250,0.6);
     margin-top: 0.5rem;
 }
 
@@ -465,7 +462,7 @@ section {
 }
 
 .service-step-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 2rem;
     font-weight: 700;
     color: var(--gold);
@@ -474,7 +471,7 @@ section {
 }
 
 .service-step h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 1.1rem;
     color: var(--navy);
     margin-bottom: 0.4rem;
@@ -517,7 +514,7 @@ section {
     align-items: center;
     gap: 0.45rem;
     padding: 0.55rem 1.3rem;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -527,7 +524,11 @@ section {
 .payment-badge-sq {
     background: #006aff;
     color: #fff;
+    border-radius: 6px;
 }
+
+.payment-badge-apple { border-radius: 6px; }
+.payment-badge-google { border-radius: 6px; }
 
 .pay-icon-sq {
     font-size: 0.65rem;
@@ -556,13 +557,13 @@ section {
 }
 
 .square-payment-wrap {
-    border: 1px solid rgba(26,39,68,0.15);
+    border: 1px solid rgba(29,53,87,0.15);
     padding: 3.5rem 2rem;
     background: #fff;
 }
 
 .payment-placeholder-note {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -573,7 +574,7 @@ section {
 
 .payment-placeholder-sub {
     font-size: 0.95rem;
-    color: rgba(26,39,68,0.55);
+    color: rgba(29,53,87,0.55);
     line-height: 1.7;
 }
 
@@ -590,12 +591,12 @@ section {
 }
 
 .notify-input {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 0.08em;
     padding: 0.9rem 1.25rem;
     background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(201,149,42,0.35);
+    border: 1px solid rgba(255,209,102,0.35);
     color: var(--cream);
     outline: none;
     width: 260px;
@@ -605,7 +606,7 @@ section {
 
 .notify-input:focus { border-color: var(--gold); }
 
-.notify-input::placeholder { color: rgba(245,239,228,0.3); }
+.notify-input::placeholder { color: rgba(248,249,250,0.3); }
 
 /* SQUARE SCHEDULE */
 .square-schedule-bg {
@@ -621,7 +622,7 @@ section {
 
 .square-embed-wrap {
     margin-top: 3rem;
-    border: 1px solid rgba(26,39,68,0.15);
+    border: 1px solid rgba(29,53,87,0.15);
     overflow: hidden;
 }
 
@@ -654,13 +655,13 @@ section {
 }
 
 .rates-category {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.65rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--rust);
     padding: 1.25rem 0 0.5rem;
-    border-top: 1px solid rgba(26,39,68,0.12);
+    border-top: 1px solid rgba(29,53,87,0.12);
     margin-top: 0.5rem;
 }
 
@@ -675,7 +676,7 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 0.65rem 0;
-    border-bottom: 1px solid rgba(26,39,68,0.08);
+    border-bottom: 1px solid rgba(29,53,87,0.08);
 }
 
 .rate-name {
@@ -684,7 +685,7 @@ section {
 }
 
 .rate-price {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--teal);
@@ -702,15 +703,15 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 0.9rem 0;
-    border-bottom: 1px solid rgba(26,39,68,0.08);
+    border-bottom: 1px solid rgba(29,53,87,0.08);
 }
 
 .hours-row:first-child {
-    border-top: 1px solid rgba(26,39,68,0.12);
+    border-top: 1px solid rgba(29,53,87,0.12);
 }
 
 .hours-day {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -718,7 +719,7 @@ section {
 }
 
 .hours-time-val {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 1rem;
     color: var(--teal);
 }
@@ -744,7 +745,7 @@ section {
     font-size: 0.75rem;
     color: var(--text-warm);
     opacity: 0.55;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     letter-spacing: 0;
     text-transform: none;
     margin-left: 0.4rem;
@@ -768,7 +769,7 @@ section {
 }
 
 .sub-card {
-    border: 1px solid rgba(201,149,42,0.3);
+    border: 1px solid rgba(255,209,102,0.3);
     padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
@@ -783,14 +784,14 @@ section {
 
 .sub-card-featured {
     border-color: var(--gold);
-    background: rgba(201,149,42,0.06);
+    background: rgba(255,209,102,0.06);
 }
 
 .sub-badge {
     position: absolute;
     top: -1px;
     right: -1px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.6rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -800,7 +801,7 @@ section {
 }
 
 .sub-label {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -808,7 +809,7 @@ section {
 }
 
 .sub-price {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 3rem;
     font-weight: 700;
     color: var(--cream);
@@ -817,12 +818,12 @@ section {
 
 .sub-price span {
     font-size: 1rem;
-    color: rgba(245,239,228,0.5);
-    font-family: 'Josefin Sans', sans-serif;
+    color: rgba(248,249,250,0.5);
+    font-family: 'Nunito', sans-serif;
 }
 
 .sub-savings {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -840,7 +841,7 @@ section {
 
 .sub-features li {
     font-size: 0.88rem;
-    color: rgba(245,239,228,0.7);
+    color: rgba(248,249,250,0.7);
     line-height: 1.5;
     padding-left: 1rem;
     position: relative;
@@ -904,7 +905,7 @@ section {
 .fsp-tag-row p {
     font-size: 0.85rem;
     line-height: 1.6;
-    color: rgba(245,239,228,0.65);
+    color: rgba(248,249,250,0.65);
 }
 
 .fsp-contest-bg {
@@ -928,7 +929,7 @@ section {
 }
 
 .fsp-prize-card {
-    border: 1px solid rgba(201,149,42,0.3);
+    border: 1px solid rgba(255,209,102,0.3);
     padding: 2rem 2.5rem;
     flex: 1;
     max-width: 220px;
@@ -945,7 +946,7 @@ section {
 }
 
 .fsp-prize-card h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 1.1rem;
     color: var(--cream);
     margin-bottom: 0.5rem;
@@ -953,12 +954,12 @@ section {
 
 .fsp-prize-card p {
     font-size: 0.85rem;
-    color: rgba(245,239,228,0.6);
+    color: rgba(248,249,250,0.6);
     line-height: 1.6;
 }
 
 .fsp-prize-divider {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-style: italic;
     font-size: 1.5rem;
     color: var(--gold);
@@ -983,7 +984,7 @@ section {
 }
 
 .fsp-label {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -995,14 +996,14 @@ section {
     font-weight: 400;
     text-transform: none;
     letter-spacing: 0;
-    color: rgba(245,239,228,0.5);
+    color: rgba(248,249,250,0.5);
     font-size: 0.78rem;
 }
 
 .fsp-field-hint {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.78rem;
-    color: rgba(245,239,228,0.5);
+    color: rgba(248,249,250,0.5);
     font-style: italic;
     margin-top: -0.15rem;
 }
@@ -1010,9 +1011,9 @@ section {
 .fsp-input,
 .fsp-textarea {
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(201,149,42,0.35);
+    border: 1px solid rgba(255,209,102,0.35);
     color: var(--cream);
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
     padding: 0.75rem 1rem;
     outline: none;
@@ -1041,9 +1042,9 @@ section {
 }
 
 .fsp-radio-label {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.85rem;
-    color: rgba(245,239,228,0.8);
+    color: rgba(248,249,250,0.8);
     display: flex;
     align-items: center;
     gap: 0.45rem;
@@ -1075,15 +1076,15 @@ section {
     gap: 2rem;
     align-items: flex-start;
     padding: 1.75rem 0;
-    border-bottom: 1px solid rgba(26,39,68,0.1);
+    border-bottom: 1px solid rgba(29,53,87,0.1);
 }
 
 .rule-item:first-child {
-    border-top: 1px solid rgba(26,39,68,0.1);
+    border-top: 1px solid rgba(29,53,87,0.1);
 }
 
 .rule-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--gold);
@@ -1093,7 +1094,7 @@ section {
 }
 
 .rule-text h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 1rem;
     color: var(--navy);
     margin-bottom: 0.4rem;
@@ -1140,14 +1141,14 @@ section {
 .gc-card-visual {
     position: relative;
     aspect-ratio: 1.586 / 1;
-    background: linear-gradient(135deg, #0a1628 0%, var(--navy) 45%, #1e3060 100%);
-    border: 1px solid rgba(201,149,42,0.55);
+    background: linear-gradient(135deg, #0d1b2a 0%, var(--navy) 45%, #264573 100%);
+    border: 1px solid rgba(255,209,102,0.55);
     padding: 1.6rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    box-shadow: 0 24px 60px rgba(0,0,0,0.28), 0 6px 20px rgba(201,149,42,0.12);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.28), 0 6px 20px rgba(255,209,102,0.12);
 }
 
 .gc-card-visual::before {
@@ -1159,15 +1160,15 @@ section {
 }
 
 .gc-card-visual--physical {
-    background: linear-gradient(135deg, #0d1f1a 0%, #1a3830 45%, #0f2a22 100%);
-    border-color: rgba(201,149,42,0.5);
+    background: linear-gradient(135deg, #0d2233 0%, #1a4050 45%, #0f3040 100%);
+    border-color: rgba(255,209,102,0.5);
 }
 
 /* Decorative rings */
 .gc-card-deco-ring {
     position: absolute;
     border-radius: 50%;
-    border: 1px solid rgba(201,149,42,0.12);
+    border: 1px solid rgba(255,209,102,0.12);
     pointer-events: none;
 }
 
@@ -1183,7 +1184,7 @@ section {
     height: 150px;
     right: -30px;
     top: -30px;
-    border-color: rgba(201,149,42,0.08);
+    border-color: rgba(255,209,102,0.08);
 }
 
 .gc-card-top {
@@ -1195,7 +1196,7 @@ section {
 }
 
 .gc-card-brand {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-style: italic;
     font-size: clamp(0.9rem, 2vw, 1.15rem);
     color: var(--cream);
@@ -1214,7 +1215,7 @@ section {
 }
 
 .gc-card-type {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: clamp(1.4rem, 3.5vw, 2rem);
     font-weight: 700;
     color: var(--cream);
@@ -1222,7 +1223,7 @@ section {
 }
 
 .gc-card-sub {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.65rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1239,11 +1240,11 @@ section {
 }
 
 .gc-card-tagline {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.58rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(245,239,228,0.35);
+    color: rgba(248,249,250,0.35);
 }
 
 .gc-nfc-icon {
@@ -1264,7 +1265,7 @@ section {
 .gc-option-desc {
     font-size: 0.9rem;
     line-height: 1.8;
-    color: rgba(26,39,68,0.65);
+    color: rgba(29,53,87,0.65);
 }
 
 /* GIFT CARDS — DEDICATED PAGE */
@@ -1284,7 +1285,7 @@ section {
 }
 
 .gc-form-card {
-    border: 1px solid rgba(201,149,42,0.3);
+    border: 1px solid rgba(255,209,102,0.3);
     padding: 3rem 2.5rem;
     transition: border-color 0.3s;
 }
@@ -1296,14 +1297,14 @@ section {
 .gc-form-header {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(201,149,42,0.2);
+    border-bottom: 1px solid rgba(255,209,102,0.2);
 }
 
 .gc-card-visual--sm {
     max-width: 260px;
     padding: 1rem 1.25rem;
     margin-bottom: 1.75rem;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.25), 0 4px 12px rgba(201,149,42,0.1);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.25), 0 4px 12px rgba(255,209,102,0.1);
 }
 
 .gc-card-visual--sm .gc-card-brand { font-size: 0.78rem; }
@@ -1341,7 +1342,7 @@ section {
 }
 
 .gc-label {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -1353,15 +1354,15 @@ section {
     font-weight: 400;
     text-transform: none;
     letter-spacing: 0;
-    color: rgba(245,239,228,0.4);
+    color: rgba(248,249,250,0.4);
     font-size: 0.72rem;
 }
 
 .gc-input {
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(201,149,42,0.35);
+    border: 1px solid rgba(255,209,102,0.35);
     color: var(--cream);
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
     padding: 0.75rem 1rem;
     outline: none;
@@ -1376,12 +1377,12 @@ section {
 }
 
 .gc-input::placeholder {
-    color: rgba(245,239,228,0.25);
+    color: rgba(248,249,250,0.25);
 }
 
 .gc-select {
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9952a' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ffd166' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     cursor: pointer;
@@ -1434,7 +1435,7 @@ section {
 }
 
 .giving-highlight h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
     color: var(--cream);
     margin-bottom: 1rem;
@@ -1443,7 +1444,7 @@ section {
 .giving-highlight p {
     font-size: 0.95rem;
     line-height: 1.8;
-    color: rgba(245,239,228,0.85);
+    color: rgba(248,249,250,0.85);
 }
 
 .giving-tags {
@@ -1454,7 +1455,7 @@ section {
 }
 
 .giving-tag {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -1489,14 +1490,14 @@ section {
 }
 
 .story-stat-number {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 4rem;
     color: var(--rust);
     line-height: 1;
 }
 
 .story-stat-label {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1535,7 +1536,7 @@ section {
 }
 
 .connect-inner .section-text {
-    color: rgba(245,239,228,0.7);
+    color: rgba(248,249,250,0.7);
     margin: 0 auto 3rem;
     text-align: center;
 }
@@ -1549,7 +1550,7 @@ section {
 }
 
 .connect-item {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.85rem;
     letter-spacing: 0.1em;
     color: var(--cream);
@@ -1565,7 +1566,7 @@ section {
 
 .connect-hours {
     margin: 2rem 0;
-    border: 1px solid rgba(201,149,42,0.3);
+    border: 1px solid rgba(255,209,102,0.3);
     padding: 1.5rem 2rem;
     text-align: left;
     max-width: 420px;
@@ -1574,7 +1575,7 @@ section {
 }
 
 .connect-hours-label {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.14em;
@@ -1597,25 +1598,25 @@ section {
 }
 
 .connect-hours-day {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 0.06em;
     color: var(--cream);
 }
 
 .connect-hours-time {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 0.06em;
-    color: rgba(245,239,228,0.6);
+    color: rgba(248,249,250,0.6);
     white-space: nowrap;
 }
 
 .connect-hours-note {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.06em;
-    color: rgba(245,239,228,0.35);
+    color: rgba(248,249,250,0.35);
     margin-top: 1rem;
     font-style: italic;
 }
@@ -1638,18 +1639,18 @@ section {
 .connect-map-link:hover { opacity: 0.75; }
 
 .connect-social-note {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.68rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(245,239,228,0.35);
+    color: rgba(248,249,250,0.35);
     margin-top: 1rem;
     text-align: center;
 }
 
 .btn {
     display: inline-block;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1682,7 +1683,7 @@ section {
 }
 
 .comm-label {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -1692,9 +1693,9 @@ section {
 
 .comm-input {
     background: #fff;
-    border: 1px solid rgba(26,39,68,0.2);
+    border: 1px solid rgba(29,53,87,0.2);
     color: var(--navy);
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
     padding: 0.7rem 0.9rem;
     outline: none;
@@ -1708,12 +1709,12 @@ section {
 }
 
 .comm-input::placeholder {
-    color: rgba(26,39,68,0.35);
+    color: rgba(29,53,87,0.35);
 }
 
 .comm-select {
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231a2744' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231d3557' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 0.9rem center;
     cursor: pointer;
@@ -1733,9 +1734,9 @@ section {
 }
 
 .comm-check-label {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.85rem;
-    color: rgba(26,39,68,0.8);
+    color: rgba(29,53,87,0.8);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -1763,7 +1764,7 @@ section {
 
 #home-hidden-cost .time-card {
     background: #fff;
-    border-color: rgba(26,39,68,0.1);
+    border-color: rgba(29,53,87,0.1);
 }
 
 #home-hidden-cost .time-card:hover {
@@ -1779,16 +1780,16 @@ section {
 }
 
 #home-hidden-cost .time-unit {
-    color: rgba(26,39,68,0.4);
+    color: rgba(29,53,87,0.4);
 }
 
 #home-hidden-cost .time-detail {
     color: var(--text-warm);
-    border-top-color: rgba(26,39,68,0.1);
+    border-top-color: rgba(29,53,87,0.1);
 }
 
 #home-hidden-cost .time-source {
-    color: rgba(26,39,68,0.28);
+    color: rgba(29,53,87,0.28);
 }
 
 #home-hidden-cost .time-callout {
@@ -1801,7 +1802,7 @@ section {
 }
 
 #home-hidden-cost .time-callout-sub {
-    color: rgba(245,239,228,0.65);
+    color: rgba(248,249,250,0.65);
 }
 
 .time-savings-inner {
@@ -1818,7 +1819,7 @@ section {
 }
 
 .time-card {
-    border: 1px solid rgba(201,149,42,0.25);
+    border: 1px solid rgba(255,209,102,0.25);
     padding: 2rem 1.75rem;
     display: flex;
     flex-direction: column;
@@ -1836,7 +1837,7 @@ section {
 }
 
 .time-business {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.15em;
@@ -1845,7 +1846,7 @@ section {
 }
 
 .time-hrs {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 3rem;
     font-weight: 900;
     color: var(--cream);
@@ -1866,40 +1867,40 @@ section {
 .time-source {
     font-size: 0.72rem;
     font-style: italic;
-    color: rgba(245,239,228,0.3);
+    color: rgba(248,249,250,0.3);
     display: block;
     margin-top: 0.5rem;
 }
 
 .time-unit {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.72rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(245,239,228,0.45);
+    color: rgba(248,249,250,0.45);
     margin-bottom: 0.75rem;
 }
 
 .time-detail {
     font-size: 0.875rem;
     line-height: 1.8;
-    color: rgba(245,239,228,0.6);
-    border-top: 1px solid rgba(201,149,42,0.2);
+    color: rgba(248,249,250,0.6);
+    border-top: 1px solid rgba(255,209,102,0.2);
     padding-top: 1rem;
     margin-top: 0.25rem;
 }
 
 .time-callout {
-    border: 1px solid rgba(201,149,42,0.4);
+    border: 1px solid rgba(255,209,102,0.4);
     padding: 3rem 2rem;
-    background: rgba(201,149,42,0.06);
+    background: rgba(255,209,102,0.06);
     text-align: center;
     max-width: 700px;
     margin: 0 auto;
 }
 
 .time-callout-number {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: clamp(3.5rem, 8vw, 6rem);
     font-weight: 900;
     color: var(--gold);
@@ -1907,7 +1908,7 @@ section {
 }
 
 .time-callout-label {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.15em;
@@ -1920,7 +1921,7 @@ section {
 .time-callout-sub {
     font-size: 0.95rem;
     line-height: 1.8;
-    color: rgba(245,239,228,0.65);
+    color: rgba(248,249,250,0.65);
     max-width: 520px;
     margin: 0 auto;
 }
@@ -1952,7 +1953,7 @@ section {
 }
 
 .reviews-overall-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 2rem;
     font-weight: 700;
     color: var(--navy);
@@ -1960,13 +1961,13 @@ section {
 }
 
 .reviews-google-label {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(26,39,68,0.45);
-    border: 1px solid rgba(26,39,68,0.18);
+    color: rgba(29,53,87,0.45);
+    border: 1px solid rgba(29,53,87,0.18);
     padding: 0.25rem 0.85rem;
 }
 
@@ -1980,7 +1981,7 @@ section {
 
 .review-card {
     background: #fff;
-    border: 1px solid rgba(26,39,68,0.1);
+    border: 1px solid rgba(29,53,87,0.1);
     padding: 1.75rem;
     display: flex;
     flex-direction: column;
@@ -2001,7 +2002,7 @@ section {
 .review-text {
     font-size: 0.9rem;
     line-height: 1.8;
-    color: rgba(26,39,68,0.72);
+    color: rgba(29,53,87,0.72);
     flex: 1;
 }
 
@@ -2016,7 +2017,7 @@ section {
     height: 2.2rem;
     background: var(--navy);
     color: var(--cream);
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.85rem;
     font-weight: 600;
     display: flex;
@@ -2027,7 +2028,7 @@ section {
 }
 
 .review-name {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -2035,10 +2036,10 @@ section {
 }
 
 .review-date {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.72rem;
     letter-spacing: 0.05em;
-    color: rgba(26,39,68,0.38);
+    color: rgba(29,53,87,0.38);
     margin-top: 0.15rem;
 }
 
@@ -2077,7 +2078,7 @@ footer {
     background: var(--navy-deep);
     padding: 2rem;
     text-align: center;
-    border-top: 1px solid rgba(201,149,42,0.2);
+    border-top: 1px solid rgba(255,209,102,0.2);
 }
 
 .footer-phone {
@@ -2086,7 +2087,7 @@ footer {
 }
 
 .footer-phone a {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.85rem;
     letter-spacing: 0.12em;
     color: var(--gold);
@@ -2097,21 +2098,21 @@ footer {
 .footer-phone a:hover { opacity: 0.75; }
 
 footer p {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: rgba(245,239,228,0.3);
+    color: rgba(248,249,250,0.3);
 }
 
 footer span { color: var(--gold); }
 
 .footer-credit {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.6rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: rgba(245,239,228,0.5);
+    color: rgba(248,249,250,0.5);
     margin-top: 0.4rem;
 }
 
@@ -2154,7 +2155,7 @@ footer span { color: var(--gold); }
         gap: 0;
         background: var(--navy);
         border-bottom: 3px solid var(--gold);
-        border-top: 1px solid rgba(201,149,42,0.2);
+        border-top: 1px solid rgba(255,209,102,0.2);
         z-index: 99;
     }
 
@@ -2165,7 +2166,7 @@ footer span { color: var(--gold); }
     .nav-links a {
         display: block;
         padding: 1rem 2rem;
-        border-bottom: 1px solid rgba(201,149,42,0.08);
+        border-bottom: 1px solid rgba(255,209,102,0.08);
         font-size: 0.8rem;
         letter-spacing: 0.18em;
     }

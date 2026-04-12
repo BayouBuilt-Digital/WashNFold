@@ -1,5 +1,5 @@
 /* ============================================================
-   C'est Bon Laundry — main.js
+   FreshNFold Laundry — main.js
    Shared scripts: mobile nav toggle + async form submission
    ============================================================ */
 
