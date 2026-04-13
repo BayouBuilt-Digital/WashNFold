@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- WNF Square Mark — QR code center, app icon, profile pic -->
+  <defs>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#64B5F6"/><stop offset="100%" stop-color="#7CC444"/>
+    </linearGradient>
+    <radialGradient id="ga" cx="30%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22"/><stop offset="25%" stop-color="#64B5F6" stop-opacity="0.14"/>
+      <stop offset="65%" stop-color="#7CC444" stop-opacity="0.06"/><stop offset="100%" stop-color="#7CC444" stop-opacity="0.02"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="110" fill="url(#mark)"/>
+
+  <!-- Large glass bubbles -->
+  <circle cx="400" cy="80" r="50" fill="url(#ga)" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.3"/>
+  <ellipse cx="382" cy="56" rx="16" ry="10" fill="#FFFFFF" opacity="0.2" transform="rotate(-20,382,56)"/>
+  <circle cx="376" cy="50" r="5" fill="#FFFFFF" opacity="0.3"/>
+
+  <circle cx="100" cy="410" r="45" fill="url(#ga)" stroke="#FFFFFF" stroke-width="1.8" stroke-opacity="0.28"/>
+  <ellipse cx="84" cy="388" rx="14" ry="9" fill="#FFFFFF" opacity="0.18" transform="rotate(-18,84,388)"/>
+  <circle cx="78" cy="382" r="4.5" fill="#FFFFFF" opacity="0.28"/>
+
+  <circle cx="420" cy="420" r="38" fill="url(#ga)" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.25"/>
+  <ellipse cx="406" cy="402" rx="12" ry="8" fill="#FFFFFF" opacity="0.14" transform="rotate(-15,406,402)"/>
+  <circle cx="400" cy="396" r="4" fill="#FFFFFF" opacity="0.24"/>
+
+  <!-- Medium bubbles -->
+  <circle cx="90" cy="100" r="28" fill="url(#ga)" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.22"/>
+  <ellipse cx="80" cy="86" rx="8" ry="5.5" fill="#FFFFFF" opacity="0.12" transform="rotate(-18,80,86)"/>
+
+  <circle cx="440" cy="250" r="22" fill="url(#ga)" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.2"/>
+  <circle cx="70" cy="260" r="18" fill="url(#ga)" stroke="#FFFFFF" stroke-width="0.9" stroke-opacity="0.18"/>
+  <circle cx="250" cy="70" r="16" fill="url(#ga)" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.18"/>
+  <circle cx="260" cy="450" r="14" fill="url(#ga)" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.16"/>
+
+  <!-- Water swirls -->
+  <path d="M110 350 Q190 300 256 350 Q322 400 400 350" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" opacity="0.35"/>
+  <path d="M130 380 Q200 338 256 380 Q312 422 382 380" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.15"/>
+
+  <!-- WNF -->
+  <text x="256" y="280" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="900" font-size="140" fill="#FFFFFF">WNF</text>
+</svg>

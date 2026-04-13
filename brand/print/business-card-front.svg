@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200" width="350" height="200">
+  <!-- Business Card Front — 3.5x2in at 100dpi -->
+  <defs>
+    <linearGradient id="dbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2a3d"/><stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#64B5F6"/><stop offset="100%" stop-color="#7CC444"/>
+    </linearGradient>
+    <radialGradient id="ga" cx="30%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22"/><stop offset="25%" stop-color="#64B5F6" stop-opacity="0.14"/>
+      <stop offset="65%" stop-color="#7CC444" stop-opacity="0.06"/><stop offset="100%" stop-color="#7CC444" stop-opacity="0.02"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="30%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2"/><stop offset="30%" stop-color="#64B5F6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#64B5F6" stop-opacity="0.02"/>
+    </radialGradient>
+    <radialGradient id="gg" cx="30%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2"/><stop offset="30%" stop-color="#7CC444" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#7CC444" stop-opacity="0.02"/>
+    </radialGradient>
+  </defs>
+  <rect width="350" height="200" rx="8" fill="url(#dbg)"/>
+  <rect width="350" height="3" rx="1.5" fill="url(#accent)"/>
+
+  <!-- Large bubbles -->
+  <circle cx="40" cy="40" r="30" fill="url(#ga)" stroke="#64B5F6" stroke-width="1.2" stroke-opacity="0.28"/>
+  <ellipse cx="28" cy="24" rx="10" ry="6.5" fill="#FFFFFF" opacity="0.15" transform="rotate(-22,28,24)"/>
+  <circle cx="24" cy="20" r="3" fill="#FFFFFF" opacity="0.25"/>
+
+  <circle cx="315" cy="165" r="28" fill="url(#gg)" stroke="#7CC444" stroke-width="1.2" stroke-opacity="0.28"/>
+  <ellipse cx="304" cy="150" rx="9" ry="6" fill="#FFFFFF" opacity="0.14" transform="rotate(-18,304,150)"/>
+  <circle cx="300" cy="146" r="2.5" fill="#FFFFFF" opacity="0.24"/>
+
+  <!-- Medium bubbles -->
+  <circle cx="310" cy="35" r="16" fill="url(#gb)" stroke="#64B5F6" stroke-width="0.9" stroke-opacity="0.22"/>
+  <circle cx="38" cy="170" r="14" fill="url(#gg)" stroke="#7CC444" stroke-width="0.8" stroke-opacity="0.2"/>
+  <circle cx="280" cy="100" r="10" fill="url(#ga)" stroke="#3BA0B5" stroke-width="0.7" stroke-opacity="0.18"/>
+  <circle cx="70" cy="105" r="8" fill="url(#gb)" stroke="#64B5F6" stroke-width="0.6" stroke-opacity="0.15"/>
+
+  <!-- Wordmark -->
+  <text x="158" y="90" text-anchor="end" font-family="'Nunito', sans-serif" font-weight="900" font-size="42" fill="#FFFFFF">Wash</text>
+  <text x="161" y="90" text-anchor="start" font-family="'Nunito', sans-serif" font-weight="900" font-size="42" fill="#7CC444">NFold</text>
+  <text x="175" y="112" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="400" font-size="9" letter-spacing="7" fill="rgba(255,255,255,0.5)">LAUNDRY</text>
+
+  <!-- Contact line -->
+  <text x="175" y="145" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="700" font-size="8" letter-spacing="2" fill="#3BA0B5">PICKUP &amp; DELIVERY · MAURICE, LA</text>
+  <text x="175" y="165" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="600" font-size="7" letter-spacing="1" fill="rgba(255,255,255,0.4)">connect@washnfold.us.com · (337) 123-4567</text>
+  <text x="175" y="182" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="800" font-size="7" letter-spacing="2" fill="rgba(255,255,255,0.3)">DIRTY CLOTHES OUT · CLEAN CLOTHES IN</text>
+</svg>

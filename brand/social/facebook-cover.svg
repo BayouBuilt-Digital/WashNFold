@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 312" width="820" height="312">
+  <!-- Facebook Cover Photo — 820x312 -->
+  <defs>
+    <linearGradient id="dbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2a3d"/><stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#64B5F6"/><stop offset="100%" stop-color="#7CC444"/>
+    </linearGradient>
+    <radialGradient id="ga" cx="30%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22"/><stop offset="25%" stop-color="#64B5F6" stop-opacity="0.14"/>
+      <stop offset="65%" stop-color="#7CC444" stop-opacity="0.06"/><stop offset="100%" stop-color="#7CC444" stop-opacity="0.02"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="30%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2"/><stop offset="30%" stop-color="#64B5F6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#64B5F6" stop-opacity="0.02"/>
+    </radialGradient>
+    <radialGradient id="gg" cx="30%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2"/><stop offset="30%" stop-color="#7CC444" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#7CC444" stop-opacity="0.02"/>
+    </radialGradient>
+  </defs>
+  <rect width="820" height="312" fill="url(#dbg)"/>
+  <rect width="820" height="4" fill="url(#accent)"/>
+  <rect y="308" width="820" height="4" fill="url(#accent)"/>
+
+  <!-- Large bubbles -->
+  <circle cx="70" cy="60" r="48" fill="url(#ga)" stroke="#64B5F6" stroke-width="1.5" stroke-opacity="0.3"/>
+  <ellipse cx="50" cy="36" rx="16" ry="10" fill="#FFFFFF" opacity="0.18" transform="rotate(-22,50,36)"/>
+  <circle cx="44" cy="30" r="4.5" fill="#FFFFFF" opacity="0.3"/>
+
+  <circle cx="750" cy="55" r="42" fill="url(#gg)" stroke="#7CC444" stroke-width="1.5" stroke-opacity="0.3"/>
+  <ellipse cx="734" cy="34" rx="14" ry="9" fill="#FFFFFF" opacity="0.16" transform="rotate(-18,734,34)"/>
+  <circle cx="728" cy="28" r="4" fill="#FFFFFF" opacity="0.28"/>
+
+  <circle cx="60" cy="255" r="40" fill="url(#gb)" stroke="#64B5F6" stroke-width="1.4" stroke-opacity="0.28"/>
+  <ellipse cx="44" cy="236" rx="13" ry="8.5" fill="#FFFFFF" opacity="0.15" transform="rotate(-20,44,236)"/>
+  <circle cx="38" cy="230" r="3.5" fill="#FFFFFF" opacity="0.25"/>
+
+  <circle cx="760" cy="260" r="38" fill="url(#ga)" stroke="#7CC444" stroke-width="1.3" stroke-opacity="0.28"/>
+  <ellipse cx="746" cy="244" rx="12" ry="8" fill="#FFFFFF" opacity="0.14" transform="rotate(-15,746,244)"/>
+  <circle cx="740" cy="238" r="3.5" fill="#FFFFFF" opacity="0.24"/>
+
+  <!-- Medium bubbles -->
+  <circle cx="180" cy="40" r="18" fill="url(#gb)" stroke="#64B5F6" stroke-width="1" stroke-opacity="0.22"/>
+  <circle cx="650" cy="280" r="16" fill="url(#gg)" stroke="#7CC444" stroke-width="0.9" stroke-opacity="0.22"/>
+  <circle cx="140" cy="270" r="14" fill="url(#gg)" stroke="#7CC444" stroke-width="0.9" stroke-opacity="0.2"/>
+  <circle cx="680" cy="45" r="15" fill="url(#gb)" stroke="#64B5F6" stroke-width="0.9" stroke-opacity="0.2"/>
+  <circle cx="200" cy="160" r="12" fill="url(#ga)" stroke="#3BA0B5" stroke-width="0.8" stroke-opacity="0.18"/>
+  <circle cx="630" cy="155" r="11" fill="url(#gg)" stroke="#7CC444" stroke-width="0.8" stroke-opacity="0.18"/>
+
+  <!-- Wordmark -->
+  <text x="378" y="155" text-anchor="end" font-family="'Nunito', sans-serif" font-weight="900" font-size="82" fill="#FFFFFF">Wash</text>
+  <text x="382" y="155" text-anchor="start" font-family="'Nunito', sans-serif" font-weight="900" font-size="82" fill="#7CC444">NFold</text>
+  <text x="410" y="195" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="400" font-size="18" letter-spacing="12" fill="rgba(255,255,255,0.5)">LAUNDRY</text>
+  <text x="410" y="230" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="700" font-size="14" letter-spacing="3" fill="#3BA0B5">PICKUP &amp; DELIVERY · MAURICE, LA</text>
+  <text x="410" y="260" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="800" font-size="12" letter-spacing="2.5" fill="rgba(255,255,255,0.4)">DIRTY CLOTHES OUT · CLEAN CLOTHES IN</text>
+</svg>
