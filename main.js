@@ -68,6 +68,46 @@
   });
 })();
 
+/* ------ CITY → ZIP CODE AUTO-FILTER ------ */
+(function () {
+  var city = document.getElementById('pickup-city');
+  var zip  = document.getElementById('pickup-zip');
+  if (!city || !zip) return;
+
+  var cityZips = {
+    'Maurice': ['70555'],
+    'Abbeville': ['70510'],
+    'Milton': ['70558'],
+    'Lafayette': ['70501', '70503', '70506', '70507', '70508']
+  };
+
+  city.addEventListener('change', function () {
+    var allowed = cityZips[city.value] || [];
+    var options = zip.querySelectorAll('option, optgroup');
+    // Show all first
+    options.forEach(function(opt) { opt.style.display = ''; });
+    // Hide non-matching optgroups
+    zip.querySelectorAll('optgroup').forEach(function(group) {
+      var match = false;
+      group.querySelectorAll('option').forEach(function(opt) {
+        if (allowed.indexOf(opt.value) !== -1) {
+          opt.style.display = '';
+          match = true;
+        } else {
+          opt.style.display = 'none';
+        }
+      });
+      group.style.display = match ? '' : 'none';
+    });
+    // Auto-select if only one zip
+    if (allowed.length === 1) {
+      zip.value = allowed[0];
+    } else {
+      zip.value = '';
+    }
+  });
+})();
+
 /* ------ PICKUP LOCATION "OTHER" TOGGLE ------ */
 (function () {
   var sel  = document.getElementById('pickup-location');
