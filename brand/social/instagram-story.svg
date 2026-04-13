@@ -2,7 +2,7 @@
   <!-- Instagram / Facebook Story — 1080x1920 (9:16) -->
   <defs>
     <linearGradient id="dbg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0f2a3d"/><stop offset="100%" stop-color="#0a1520"/>
+      <stop offset="0%" stop-color="#FAFCFF"/><stop offset="100%" stop-color="#F0F7FF"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#64B5F6"/><stop offset="100%" stop-color="#7CC444"/>
@@ -64,13 +64,13 @@
   <text x="540" y="826" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="900" font-size="120" fill="#FFFFFF">WNF</text>
 
   <!-- Wordmark -->
-  <text x="490" y="1120" text-anchor="end" font-family="'Nunito', sans-serif" font-weight="900" font-size="130" fill="#FFFFFF">Wash</text>
+  <text x="490" y="1120" text-anchor="end" font-family="'Nunito', sans-serif" font-weight="900" font-size="130" fill="#1B3A4B">Wash</text>
   <text x="500" y="1120" text-anchor="start" font-family="'Nunito', sans-serif" font-weight="900" font-size="130" fill="#7CC444">NFold</text>
-  <text x="540" y="1190" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="400" font-size="32" letter-spacing="18" fill="rgba(255,255,255,0.5)">LAUNDRY</text>
+  <text x="540" y="1190" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="400" font-size="32" letter-spacing="18" fill="#6B7280">LAUNDRY</text>
 
   <!-- Taglines -->
   <text x="540" y="1320" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="700" font-size="28" letter-spacing="5" fill="#3BA0B5">PICKUP &amp; DELIVERY</text>
   <text x="540" y="1370" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="700" font-size="28" letter-spacing="5" fill="#3BA0B5">MAURICE, LOUISIANA</text>
 
-  <text x="540" y="1460" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="800" font-size="22" letter-spacing="4" fill="rgba(255,255,255,0.35)">DIRTY CLOTHES OUT · CLEAN CLOTHES IN</text>
+  <text x="540" y="1460" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="800" font-size="22" letter-spacing="4" fill="#9CB8C8">DIRTY CLOTHES OUT · CLEAN CLOTHES IN</text>
 </svg>

@@ -2,7 +2,7 @@
   <!-- Facebook Cover Photo — 820x312 -->
   <defs>
     <linearGradient id="dbg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0f2a3d"/><stop offset="100%" stop-color="#0a1520"/>
+      <stop offset="0%" stop-color="#FAFCFF"/><stop offset="100%" stop-color="#F0F7FF"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#64B5F6"/><stop offset="100%" stop-color="#7CC444"/>
@@ -50,9 +50,9 @@
   <circle cx="630" cy="155" r="11" fill="url(#gg)" stroke="#7CC444" stroke-width="0.8" stroke-opacity="0.18"/>
 
   <!-- Wordmark -->
-  <text x="378" y="155" text-anchor="end" font-family="'Nunito', sans-serif" font-weight="900" font-size="82" fill="#FFFFFF">Wash</text>
+  <text x="378" y="155" text-anchor="end" font-family="'Nunito', sans-serif" font-weight="900" font-size="82" fill="#1B3A4B">Wash</text>
   <text x="382" y="155" text-anchor="start" font-family="'Nunito', sans-serif" font-weight="900" font-size="82" fill="#7CC444">NFold</text>
-  <text x="410" y="195" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="400" font-size="18" letter-spacing="12" fill="rgba(255,255,255,0.5)">LAUNDRY</text>
+  <text x="410" y="195" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="400" font-size="18" letter-spacing="12" fill="#6B7280">LAUNDRY</text>
   <text x="410" y="230" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="700" font-size="14" letter-spacing="3" fill="#3BA0B5">PICKUP &amp; DELIVERY · MAURICE, LA</text>
-  <text x="410" y="260" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="800" font-size="12" letter-spacing="2.5" fill="rgba(255,255,255,0.4)">DIRTY CLOTHES OUT · CLEAN CLOTHES IN</text>
+  <text x="410" y="260" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="800" font-size="12" letter-spacing="2.5" fill="#6B7280">DIRTY CLOTHES OUT · CLEAN CLOTHES IN</text>
 </svg>
