@@ -471,6 +471,25 @@
     .pc-r span { font-size:11px;font-weight:600;-webkit-text-fill-color:var(--text3) }
     .pc-d { font-size:10px;color:var(--text3);margin-top:5px;line-height:1.4;font-weight:600 }
 
+    /* Pickup schedule notice */
+    .pickup-notice {
+      margin: 16px 0 8px;
+      background: linear-gradient(135deg, rgba(100,181,246,0.08), rgba(124,196,68,0.06));
+      border: 1.5px solid rgba(100,181,246,0.25);
+      border-radius: 14px; padding: 18px 20px;
+      animation: fadeUp 0.4s ease both;
+    }
+    .pn-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .pn-icon { font-size: 18px; }
+    .pn-title { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .pn-date { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--text); margin-bottom: 6px; }
+    .pn-cutoff { font-size: 12px; color: var(--text2); font-weight: 700; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .pn-cutoff strong { color: #ef4444; }
+    .pn-instructions { display: flex; flex-direction: column; gap: 10px; }
+    .pn-step { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--text2); font-weight: 600; line-height: 1.55; }
+    .pn-step strong { color: var(--text); }
+    .pn-num { width: 22px; height: 22px; border-radius: 50%; background: var(--grad); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 900; color: #fff; flex-shrink: 0; }
+
     /* Addon accordion */
     .addon-accordion { margin-bottom: 13px; border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; }
     .addon-trigger {
@@ -1157,7 +1176,7 @@
           <div class="frow" style="margin-bottom:22px">
             <div class="ff">
               <label class="fl">Preferred Pickup Day <span class="r">*</span></label>
-              <select name="pickup_day" required>
+              <select name="pickup_day" id="pickupDaySelect" required>
                 <option value="">Select a day...</option>
                 <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
                 <option>Thursday</option><option>Friday</option>
@@ -1171,6 +1190,22 @@
               </select>
             </div>
           </div>
+
+          <!-- Pickup Schedule Notice -->
+          <div class="pickup-notice" id="pickupNotice" style="display:none">
+            <div class="pn-header">
+              <span class="pn-icon">📅</span>
+              <span class="pn-title">Your Next Pickup</span>
+            </div>
+            <div class="pn-date" id="pnDate"></div>
+            <div class="pn-cutoff" id="pnCutoff"></div>
+            <div class="pn-instructions">
+              <div class="pn-step"><span class="pn-num">1</span> Place your first load in a <strong>13-gallon kitchen bag</strong> and leave it by your door before 7 AM.</div>
+              <div class="pn-step"><span class="pn-num">2</span> We'll pick it up, wash, fold, and return your clean clothes in a <strong>reusable WashNFold bag</strong> (~30 lbs capacity).</div>
+              <div class="pn-step"><span class="pn-num">3</span> Use the reusable bag going forward — <strong>dirty clothes out, clean clothes in.</strong> No disruption of service.</div>
+            </div>
+          </div>
+
         </div>
 
         <div class="fdiv"></div>
@@ -1504,6 +1539,63 @@
     else row.style.display='none';
     updateEst();
   }
+
+  // ── PICKUP DAY SCHEDULING NOTICE ──
+  (function(){
+    var daySelect = document.getElementById('pickupDaySelect');
+    var notice = document.getElementById('pickupNotice');
+    var dateEl = document.getElementById('pnDate');
+    var cutoffEl = document.getElementById('pnCutoff');
+    if(!daySelect || !notice) return;
+
+    var dayMap = { 'Monday':1, 'Tuesday':2, 'Wednesday':3, 'Thursday':4, 'Friday':5 };
+    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+    function getNextPickup(dayName){
+      var now = new Date();
+      var target = dayMap[dayName];
+      var current = now.getDay();
+      var currentHour = now.getHours();
+      var diff = target - current;
+
+      // Same day but after 5 AM cutoff — push to next week
+      if(diff === 0 && currentHour >= 5){
+        diff = 7;
+      } else if(diff <= 0){
+        diff += 7;
+      }
+
+      var pickup = new Date(now);
+      pickup.setDate(now.getDate() + diff);
+      return pickup;
+    }
+
+    daySelect.addEventListener('change', function(){
+      var val = daySelect.value;
+      if(!val){ notice.style.display = 'none'; return; }
+
+      var now = new Date();
+      var target = dayMap[val];
+      var current = now.getDay();
+      var currentHour = now.getHours();
+      var isToday = (current === target);
+      var pastCutoff = (currentHour >= 5);
+
+      var pickup = getNextPickup(val);
+      var dateStr = days[pickup.getDay()] + ', ' + months[pickup.getMonth()] + ' ' + pickup.getDate();
+
+      dateEl.textContent = dateStr;
+
+      if(isToday && pastCutoff){
+        cutoffEl.innerHTML = '⚠️ Today\'s <strong>5:00 AM cutoff has passed</strong>. Your pickup has been scheduled for next ' + val + '.';
+      } else {
+        cutoffEl.innerHTML = 'Orders must be placed <strong>before 5:00 AM</strong> on your pickup day. After 5 AM, your order moves to the following ' + val + '.';
+      }
+
+      notice.style.display = 'block';
+    });
+  })();
 
   // ── ADDONS ──
   function updateBadge() {
