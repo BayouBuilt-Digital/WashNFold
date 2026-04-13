@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <!-- Instagram / Facebook Story — 1080x1920 (9:16) -->
+  <defs>
+    <linearGradient id="dbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAFCFF"/><stop offset="100%" stop-color="#F0F7FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#64B5F6"/><stop offset="100%" stop-color="#7CC444"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#64B5F6"/><stop offset="100%" stop-color="#7CC444"/>
+    </linearGradient>
+    <radialGradient id="ga" cx="30%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22"/><stop offset="25%" stop-color="#64B5F6" stop-opacity="0.14"/>
+      <stop offset="65%" stop-color="#7CC444" stop-opacity="0.06"/><stop offset="100%" stop-color="#7CC444" stop-opacity="0.02"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="30%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2"/><stop offset="30%" stop-color="#64B5F6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#64B5F6" stop-opacity="0.02"/>
+    </radialGradient>
+    <radialGradient id="gg" cx="30%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2"/><stop offset="30%" stop-color="#7CC444" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#7CC444" stop-opacity="0.02"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#dbg)"/>
+  <rect width="1080" height="5" fill="url(#accent)"/>
+  <rect y="1915" width="1080" height="5" fill="url(#accent)"/>
+
+  <!-- Large floating bubbles -->
+  <circle cx="120" cy="200" r="90" fill="url(#ga)" stroke="#64B5F6" stroke-width="2" stroke-opacity="0.3"/>
+  <ellipse cx="86" cy="152" rx="30" ry="19" fill="#FFFFFF" opacity="0.18" transform="rotate(-22,86,152)"/>
+  <circle cx="76" cy="140" r="8" fill="#FFFFFF" opacity="0.3"/>
+
+  <circle cx="960" cy="350" r="75" fill="url(#gg)" stroke="#7CC444" stroke-width="2" stroke-opacity="0.28"/>
+  <ellipse cx="938" cy="310" rx="24" ry="16" fill="#FFFFFF" opacity="0.15" transform="rotate(-18,938,310)"/>
+  <circle cx="930" cy="300" r="7" fill="#FFFFFF" opacity="0.26"/>
+
+  <circle cx="100" cy="1650" r="80" fill="url(#gb)" stroke="#64B5F6" stroke-width="1.8" stroke-opacity="0.28"/>
+  <ellipse cx="74" cy="1608" rx="26" ry="16" fill="#FFFFFF" opacity="0.15" transform="rotate(-20,74,1608)"/>
+  <circle cx="66" cy="1598" r="7" fill="#FFFFFF" opacity="0.25"/>
+
+  <circle cx="970" cy="1700" r="70" fill="url(#ga)" stroke="#7CC444" stroke-width="1.8" stroke-opacity="0.28"/>
+  <ellipse cx="950" cy="1664" rx="22" ry="14" fill="#FFFFFF" opacity="0.14" transform="rotate(-15,950,1664)"/>
+  <circle cx="944" cy="1656" r="6" fill="#FFFFFF" opacity="0.24"/>
+
+  <!-- Medium bubbles scattered -->
+  <circle cx="900" cy="800" r="40" fill="url(#gb)" stroke="#64B5F6" stroke-width="1.5" stroke-opacity="0.22"/>
+  <circle cx="160" cy="900" r="35" fill="url(#gg)" stroke="#7CC444" stroke-width="1.3" stroke-opacity="0.22"/>
+  <circle cx="920" cy="1200" r="30" fill="url(#ga)" stroke="#3BA0B5" stroke-width="1.2" stroke-opacity="0.2"/>
+  <circle cx="140" cy="1300" r="28" fill="url(#gb)" stroke="#64B5F6" stroke-width="1" stroke-opacity="0.2"/>
+  <circle cx="800" cy="160" r="25" fill="url(#gg)" stroke="#7CC444" stroke-width="1" stroke-opacity="0.18"/>
+  <circle cx="300" cy="1800" r="22" fill="url(#ga)" stroke="#3BA0B5" stroke-width="0.9" stroke-opacity="0.18"/>
+  <circle cx="780" cy="1800" r="20" fill="url(#gb)" stroke="#64B5F6" stroke-width="0.9" stroke-opacity="0.16"/>
+
+  <!-- Icon mark with washer -->
+  <rect x="340" y="580" width="400" height="400" rx="88" fill="url(#mark)"/>
+  <g transform="translate(364,596) scale(2.0)">
+    <rect x="20" y="12" width="136" height="160" rx="16" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    <line x1="20" y1="44" x2="156" y2="44" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="52" cy="29" r="5" fill="none" stroke="#FFFFFF" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="88" cy="29" r="5" fill="none" stroke="#FFFFFF" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="124" cy="29" r="5" fill="none" stroke="#FFFFFF" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="88" cy="110" r="52" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" opacity="0.95"/>
+    <circle cx="88" cy="110" r="46" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.35"/>
+    <circle cx="88" cy="103" r="14" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.6"/>
+    <circle cx="68" cy="92" r="8" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.45"/>
+    <circle cx="110" cy="95" r="7" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.45"/>
+    <circle cx="72" cy="128" r="6" fill="none" stroke="#FFFFFF" stroke-width="1.8" opacity="0.35"/>
+    <path d="M60 140 Q68 132 76 140" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <path d="M96 142 Q104 134 112 142" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="490" y="1120" text-anchor="end" font-family="'Nunito', sans-serif" font-weight="900" font-size="130" fill="#1B3A4B">Wash</text>
+  <text x="500" y="1120" text-anchor="start" font-family="'Nunito', sans-serif" font-weight="900" font-size="130" fill="#7CC444">NFold</text>
+  <text x="540" y="1190" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="400" font-size="32" letter-spacing="18" fill="#6B7280">LAUNDRY</text>
+
+  <!-- Taglines -->
+  <text x="540" y="1320" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="700" font-size="28" letter-spacing="5" fill="#3BA0B5">PICKUP &amp; DELIVERY</text>
+  <text x="540" y="1370" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="700" font-size="28" letter-spacing="5" fill="#3BA0B5">MAURICE, LOUISIANA</text>
+
+  <text x="540" y="1460" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="800" font-size="22" letter-spacing="4" fill="#9CB8C8">DIRTY CLOTHES OUT · CLEAN CLOTHES IN</text>
+</svg>
