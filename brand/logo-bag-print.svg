@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <!-- WashNFold — Bag Print Layout (centered, large, print-ready) -->
+  <!-- Designed for reusable laundry bags -->
+
+  <defs>
+    <linearGradient id="mark-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#64B5F6"/>
+      <stop offset="100%" stop-color="#7CC444"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Large icon mark -->
+  <rect x="150" y="30" width="200" height="200" rx="44" fill="url(#mark-bg)"/>
+  <!-- Glass bubbles -->
+  <circle cx="304" cy="62" r="15" fill="#fff" opacity="0.25"/>
+  <circle cx="326" cy="88" r="9" fill="#fff" opacity="0.18"/>
+  <circle cx="172" cy="188" r="14" fill="#fff" opacity="0.2"/>
+  <circle cx="192" cy="210" r="7" fill="#fff" opacity="0.12"/>
+  <circle cx="296" cy="202" r="10" fill="#fff" opacity="0.15"/>
+  <circle cx="172" cy="62" r="11" fill="#fff" opacity="0.1"/>
+  <!-- Water swirl -->
+  <path d="M182 182 Q218 152 250 182 Q282 212 318 182" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+  <path d="M194 198 Q222 174 248 198 Q274 222 302 198" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
+  <!-- WNF -->
+  <text x="250" y="158" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="62" fill="#FFFFFF">WNF</text>
+
+  <!-- Wordmark -->
+  <text x="218" y="310" text-anchor="end"
+        font-family="Arial, Helvetica, sans-serif" font-weight="900"
+        font-size="80" fill="#1B3A4B">Wash</text>
+  <text x="224" y="310" text-anchor="start"
+        font-family="Arial, Helvetica, sans-serif" font-weight="900"
+        font-size="80" fill="#7CC444">NFold</text>
+
+  <!-- LAUNDRY -->
+  <text x="250" y="352" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="400"
+        font-size="20" letter-spacing="14" fill="#6B7280">LAUNDRY</text>
+
+  <!-- Divider -->
+  <rect x="190" y="376" width="120" height="2" rx="1" fill="#64B5F6" opacity="0.3"/>
+
+  <!-- Tagline -->
+  <text x="250" y="410" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="700"
+        font-size="14" letter-spacing="4" fill="#3BA0B5">PICKUP &amp; DELIVERY</text>
+
+  <!-- Slogan -->
+  <text x="250" y="460" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="800"
+        font-size="13" letter-spacing="3" fill="#1B3A4B">DIRTY CLOTHES OUT · CLEAN CLOTHES IN</text>
+
+  <!-- Location -->
+  <text x="250" y="486" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="600"
+        font-size="11" letter-spacing="2" fill="#6B7280">MAURICE, LOUISIANA</text>
+</svg>
