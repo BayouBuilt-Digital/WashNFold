@@ -1210,6 +1210,39 @@
 
         <div class="fdiv"></div>
 
+        <!-- Pickup Location & Special Instructions -->
+        <div class="fs">
+          <div class="fs-lbl">Pickup Location &amp; Access</div>
+          <div class="frow">
+            <div class="ff">
+              <label class="fl">Where Should We Pick Up? <span class="r">*</span></label>
+              <select name="pickup_spot" required>
+                <option value="">Select...</option>
+                <option>Front Door</option>
+                <option>Side Door</option>
+                <option>Carport</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="ff">
+              <label class="fl">Gate Code / Access <span class="o">(if applicable)</span></label>
+              <input type="text" name="gate_code" placeholder="Gate code, lock box, key under mat, etc.">
+            </div>
+          </div>
+          <div class="frow">
+            <div class="ff">
+              <label class="fl">Allergies / Sensitivities <span class="o">(optional)</span></label>
+              <input type="text" name="allergies" placeholder="Fragrance-free, hypoallergenic, etc.">
+            </div>
+            <div class="ff">
+              <label class="fl">Anything Else? <span class="o">(optional)</span></label>
+              <input type="text" name="special_notes" placeholder="Pets in yard, drop-off spot, etc.">
+            </div>
+          </div>
+        </div>
+
+        <div class="fdiv"></div>
+
         <!-- Add-ons accordion -->
         <div class="fs" style="padding-bottom:0">
           <div class="fs-lbl">Add-Ons</div>
