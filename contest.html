@@ -254,15 +254,8 @@
       border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 900; cursor: pointer;
     }
     .owner-close { position: absolute; top: 10px; right: 14px; background: none; border: none; font-size: 18px; cursor: pointer; color: var(--text3-home); }
-    .owner-trigger {
-      position: fixed; bottom: 20px; right: 20px; z-index: 998;
-      width: 44px; height: 44px; border-radius: 50%;
-      background: var(--grad-home); color: #fff; border: none;
-      font-size: 18px; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0.3; transition: opacity 0.2s;
-    }
-    .owner-trigger:hover { opacity: 1; }
+    .contest-winner-photo { cursor: pointer; transition: box-shadow 0.2s; }
+    .contest-winner-photo:hover { box-shadow: 0 0 0 3px var(--blue); }
   </style>
 </head>
 <body>
@@ -410,8 +403,7 @@
     <p>Site by <a href="https://bayoubuilt-digital.com">BayouBuilt Digital</a></p>
   </footer>
 
-  <!-- OWNER-ONLY PANEL (hidden, password-gated) -->
-  <button class="owner-trigger" id="ownerTrigger" title="Owner access">🔒</button>
+  <!-- OWNER-ONLY PANEL (hidden, password-gated — click winner photo to open) -->
   <div class="owner-gate" id="ownerGate">
     <div class="owner-panel" style="position:relative">
       <button class="owner-close" id="ownerClose">&times;</button>
@@ -435,14 +427,15 @@
   /* ── Owner Panel ── */
   (function(){
     var OWNER_PASS = 'washnfold2026';
-    var trigger = document.getElementById('ownerTrigger');
+    var photo = document.getElementById('winner-photo');
     var gate = document.getElementById('ownerGate');
     var close = document.getElementById('ownerClose');
     var passInput = document.getElementById('owner-pass');
     var fields = document.getElementById('owner-fields');
     var save = document.getElementById('ownerSave');
 
-    trigger.addEventListener('click', function(){ gate.classList.toggle('open'); });
+    // Click the winner photo to open owner panel
+    photo.addEventListener('click', function(){ gate.classList.toggle('open'); });
     close.addEventListener('click', function(){ gate.classList.remove('open'); });
 
     passInput.addEventListener('input', function(){
