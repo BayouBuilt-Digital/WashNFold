@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300">
+  <!-- Logo: Bubble Field — random bubbles scattered everywhere -->
+  <!-- FOR: White shirts, natural cotton bags -->
+  <!-- PRIMARY BRAND LOGO #3 -->
+
+  <defs>
+    <radialGradient id="bb" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#64B5F6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#64B5F6" stop-opacity="0.03"/>
+    </radialGradient>
+    <radialGradient id="bg" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#7CC444" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#7CC444" stop-opacity="0.03"/>
+    </radialGradient>
+    <radialGradient id="bm" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#64B5F6" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#7CC444" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#7CC444" stop-opacity="0.03"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ═══ BUBBLE FIELD — scattered across entire canvas ═══ -->
+
+  <!-- Top-left cluster -->
+  <circle cx="42" cy="28" r="22" fill="url(#bb)" stroke="#64B5F6" stroke-width="1.5" stroke-opacity="0.4"/>
+  <ellipse cx="34" cy="18" rx="6" ry="4" fill="#64B5F6" opacity="0.12" transform="rotate(-20,34,18)"/>
+  <circle cx="30" cy="14" r="2.5" fill="#64B5F6" opacity="0.25"/>
+
+  <circle cx="85" cy="55" r="11" fill="url(#bg)" stroke="#7CC444" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="18" cy="72" r="7" fill="url(#bb)" stroke="#64B5F6" stroke-width="0.8" stroke-opacity="0.25"/>
+  <circle cx="65" cy="14" r="5" fill="url(#bg)" stroke="#7CC444" stroke-width="0.6" stroke-opacity="0.2"/>
+
+  <!-- Top-right cluster -->
+  <circle cx="498" cy="22" r="18" fill="url(#bg)" stroke="#7CC444" stroke-width="1.5" stroke-opacity="0.4"/>
+  <ellipse cx="491" cy="14" rx="5" ry="3.5" fill="#7CC444" opacity="0.1" transform="rotate(-15,491,14)"/>
+  <circle cx="487" cy="10" r="2" fill="#7CC444" opacity="0.22"/>
+
+  <circle cx="535" cy="55" r="13" fill="url(#bb)" stroke="#64B5F6" stroke-width="1.2" stroke-opacity="0.35"/>
+  <circle cx="460" cy="48" r="8" fill="url(#bg)" stroke="#7CC444" stroke-width="0.8" stroke-opacity="0.25"/>
+  <circle cx="520" cy="18" r="5" fill="url(#bm)" stroke="#3BA0B5" stroke-width="0.6" stroke-opacity="0.2"/>
+
+  <!-- Left side — mid height -->
+  <circle cx="28" cy="145" r="16" fill="url(#bm)" stroke="#3BA0B5" stroke-width="1.2" stroke-opacity="0.35"/>
+  <ellipse cx="22" cy="137" rx="4.5" ry="3" fill="#64B5F6" opacity="0.08" transform="rotate(-18,22,137)"/>
+
+  <circle cx="55" cy="195" r="10" fill="url(#bb)" stroke="#64B5F6" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="15" cy="210" r="6" fill="url(#bg)" stroke="#7CC444" stroke-width="0.7" stroke-opacity="0.2"/>
+  <circle cx="70" cy="118" r="5" fill="url(#bg)" stroke="#7CC444" stroke-width="0.6" stroke-opacity="0.18"/>
+
+  <!-- Right side — mid height -->
+  <circle cx="530" cy="135" r="15" fill="url(#bg)" stroke="#7CC444" stroke-width="1.2" stroke-opacity="0.35"/>
+  <ellipse cx="524" cy="127" rx="4" ry="3" fill="#7CC444" opacity="0.08" transform="rotate(-15,524,127)"/>
+
+  <circle cx="505" cy="190" r="9" fill="url(#bm)" stroke="#3BA0B5" stroke-width="0.8" stroke-opacity="0.25"/>
+  <circle cx="545" cy="175" r="6" fill="url(#bb)" stroke="#64B5F6" stroke-width="0.7" stroke-opacity="0.2"/>
+  <circle cx="490" cy="110" r="4" fill="url(#bb)" stroke="#64B5F6" stroke-width="0.5" stroke-opacity="0.15"/>
+
+  <!-- Bottom-left -->
+  <circle cx="50" cy="260" r="20" fill="url(#bb)" stroke="#64B5F6" stroke-width="1.5" stroke-opacity="0.38"/>
+  <ellipse cx="42" cy="250" rx="5.5" ry="4" fill="#64B5F6" opacity="0.1" transform="rotate(-20,42,250)"/>
+  <circle cx="38" cy="246" r="2.5" fill="#64B5F6" opacity="0.2"/>
+
+  <circle cx="95" cy="285" r="8" fill="url(#bg)" stroke="#7CC444" stroke-width="0.8" stroke-opacity="0.22"/>
+  <circle cx="22" cy="240" r="5" fill="url(#bg)" stroke="#7CC444" stroke-width="0.6" stroke-opacity="0.18"/>
+
+  <!-- Bottom-right -->
+  <circle cx="510" cy="252" r="17" fill="url(#bg)" stroke="#7CC444" stroke-width="1.3" stroke-opacity="0.35"/>
+  <ellipse cx="503" cy="243" rx="5" ry="3.5" fill="#7CC444" opacity="0.1" transform="rotate(-18,503,243)"/>
+  <circle cx="500" cy="240" r="2" fill="#7CC444" opacity="0.2"/>
+
+  <circle cx="468" cy="278" r="9" fill="url(#bb)" stroke="#64B5F6" stroke-width="0.8" stroke-opacity="0.25"/>
+  <circle cx="540" cy="270" r="6" fill="url(#bm)" stroke="#3BA0B5" stroke-width="0.6" stroke-opacity="0.18"/>
+
+  <!-- Scattered singles — floating in gaps -->
+  <circle cx="140" cy="280" r="7" fill="url(#bm)" stroke="#3BA0B5" stroke-width="0.7" stroke-opacity="0.2"/>
+  <circle cx="420" cy="280" r="6" fill="url(#bb)" stroke="#64B5F6" stroke-width="0.6" stroke-opacity="0.18"/>
+  <circle cx="180" cy="95" r="4" fill="url(#bg)" stroke="#7CC444" stroke-width="0.5" stroke-opacity="0.15"/>
+  <circle cx="380" cy="85" r="5" fill="url(#bb)" stroke="#64B5F6" stroke-width="0.5" stroke-opacity="0.15"/>
+  <circle cx="320" cy="12" r="4" fill="url(#bg)" stroke="#7CC444" stroke-width="0.5" stroke-opacity="0.12"/>
+  <circle cx="200" cy="270" r="5" fill="url(#bb)" stroke="#64B5F6" stroke-width="0.5" stroke-opacity="0.14"/>
+  <circle cx="350" cy="275" r="4" fill="url(#bg)" stroke="#7CC444" stroke-width="0.5" stroke-opacity="0.12"/>
+
+  <!-- ═══ WORDMARK ═══ -->
+  <text x="248" y="150" text-anchor="end"
+        font-family="'Nunito', sans-serif" font-weight="900"
+        font-size="80" fill="#1B3A4B">Wash</text>
+  <text x="252" y="150" text-anchor="start"
+        font-family="'Nunito', sans-serif" font-weight="900"
+        font-size="80" fill="#7CC444">NFold</text>
+
+  <!-- Subtitle -->
+  <text x="280" y="190" text-anchor="middle"
+        font-family="'Nunito', sans-serif" font-weight="400"
+        font-size="18" letter-spacing="12" fill="#6B7280">LAUNDRY</text>
+
+  <text x="280" y="230" text-anchor="middle"
+        font-family="'Nunito', sans-serif" font-weight="700"
+        font-size="12" letter-spacing="3" fill="#3BA0B5">PICKUP &amp; DELIVERY · MAURICE, LA</text>
+
+  <text x="280" y="270" text-anchor="middle"
+        font-family="'Nunito', sans-serif" font-weight="800"
+        font-size="11" letter-spacing="2.5" fill="#1B3A4B">DIRTY CLOTHES OUT · CLEAN CLOTHES IN</text>
+</svg>
