@@ -28,7 +28,7 @@
   <circle cx="440" cy="250" r="22" fill="url(#ga)" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.2"/>
 
   <!-- ═══ WASHER ICON (centered, larger) ═══ -->
-  <g transform="translate(124,76) scale(1.75)">
+  <g transform="translate(120,113) scale(1.55)">
     <!-- Washer body -->
     <rect x="20" y="12" width="136" height="160" rx="16" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
 
