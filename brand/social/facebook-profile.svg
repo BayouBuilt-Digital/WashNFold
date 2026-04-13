@@ -1,7 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 170" width="170" height="170">
   <!-- Facebook / Instagram Profile Picture — 170x170 -->
+  <!-- Style matched to Instagram post -->
   <defs>
+    <linearGradient id="dbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAFCFF"/><stop offset="100%" stop-color="#F0F7FF"/>
+    </linearGradient>
     <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#64B5F6"/><stop offset="100%" stop-color="#7CC444"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#64B5F6"/><stop offset="100%" stop-color="#7CC444"/>
     </linearGradient>
     <radialGradient id="ga" cx="30%" cy="25%" r="65%">
@@ -9,14 +16,22 @@
       <stop offset="65%" stop-color="#7CC444" stop-opacity="0.06"/><stop offset="100%" stop-color="#7CC444" stop-opacity="0.02"/>
     </radialGradient>
   </defs>
-  <rect width="170" height="170" rx="85" fill="url(#mark)"/>
+
+  <!-- Light background -->
+  <rect width="170" height="170" rx="85" fill="url(#dbg)"/>
+  <!-- Gradient border ring -->
+  <circle cx="85" cy="85" r="83" fill="none" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.3"/>
 
   <!-- Glass bubbles -->
-  <circle cx="132" cy="30" r="18" fill="url(#ga)" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
-  <ellipse cx="126" cy="22" rx="5" ry="3.5" fill="#FFFFFF" opacity="0.2" transform="rotate(-18,126,22)"/>
-  <circle cx="30" cy="130" r="15" fill="url(#ga)" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.25"/>
-  <circle cx="145" cy="120" r="10" fill="url(#ga)" stroke="#FFFFFF" stroke-width="0.7" stroke-opacity="0.2"/>
-  <circle cx="25" cy="40" r="12" fill="url(#ga)" stroke="#FFFFFF" stroke-width="0.7" stroke-opacity="0.2"/>
+  <circle cx="138" cy="28" r="16" fill="url(#ga)" stroke="#7CC444" stroke-width="0.8" stroke-opacity="0.3"/>
+  <ellipse cx="132" cy="21" rx="4.5" ry="3" fill="#FFFFFF" opacity="0.15" transform="rotate(-18,132,21)"/>
+  <circle cx="28" cy="135" r="14" fill="url(#ga)" stroke="#64B5F6" stroke-width="0.8" stroke-opacity="0.28"/>
+  <ellipse cx="23" cy="128" rx="4" ry="2.5" fill="#FFFFFF" opacity="0.12" transform="rotate(-15,23,128)"/>
+  <circle cx="148" cy="125" r="9" fill="url(#ga)" stroke="#7CC444" stroke-width="0.6" stroke-opacity="0.22"/>
+  <circle cx="22" cy="38" r="10" fill="url(#ga)" stroke="#64B5F6" stroke-width="0.6" stroke-opacity="0.22"/>
+
+  <!-- Gradient icon mark -->
+  <rect x="28" y="28" width="114" height="114" rx="30" fill="url(#mark)"/>
 
   <!-- Washer icon -->
   <g transform="translate(37,34) scale(0.55)">
