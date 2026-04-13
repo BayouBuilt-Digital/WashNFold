@@ -53,15 +53,23 @@
   <circle cx="300" cy="1800" r="22" fill="url(#ga)" stroke="#3BA0B5" stroke-width="0.9" stroke-opacity="0.18"/>
   <circle cx="780" cy="1800" r="20" fill="url(#gb)" stroke="#64B5F6" stroke-width="0.9" stroke-opacity="0.16"/>
 
-  <!-- Icon mark -->
+  <!-- Icon mark with washer -->
   <rect x="340" y="580" width="400" height="400" rx="88" fill="url(#mark)"/>
-  <circle cx="650" cy="638" r="30" fill="#FFFFFF" opacity="0.2"/>
-  <circle cx="692" cy="686" r="18" fill="#FFFFFF" opacity="0.12"/>
-  <circle cx="380" cy="910" r="28" fill="#FFFFFF" opacity="0.15"/>
-  <circle cx="416" cy="948" r="14" fill="#FFFFFF" opacity="0.1"/>
-  <path d="M400 860 Q480 790 540 860 Q600 930 680 860" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" opacity="0.4"/>
-  <path d="M422 894 Q488 838 540 894 Q592 950 658 894" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" opacity="0.2"/>
-  <text x="540" y="826" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="900" font-size="120" fill="#FFFFFF">WNF</text>
+  <g transform="translate(382,600) scale(2.25)">
+    <rect x="20" y="12" width="136" height="160" rx="16" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    <line x1="20" y1="44" x2="156" y2="44" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="52" cy="29" r="5" fill="none" stroke="#FFFFFF" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="88" cy="29" r="5" fill="none" stroke="#FFFFFF" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="124" cy="29" r="5" fill="none" stroke="#FFFFFF" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="88" cy="110" r="52" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" opacity="0.95"/>
+    <circle cx="88" cy="110" r="46" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.35"/>
+    <circle cx="88" cy="103" r="14" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.6"/>
+    <circle cx="68" cy="92" r="8" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.45"/>
+    <circle cx="110" cy="95" r="7" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.45"/>
+    <circle cx="72" cy="128" r="6" fill="none" stroke="#FFFFFF" stroke-width="1.8" opacity="0.35"/>
+    <path d="M60 140 Q68 132 76 140" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <path d="M96 142 Q104 134 112 142" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  </g>
 
   <!-- Wordmark -->
   <text x="490" y="1120" text-anchor="end" font-family="'Nunito', sans-serif" font-weight="900" font-size="130" fill="#1B3A4B">Wash</text>

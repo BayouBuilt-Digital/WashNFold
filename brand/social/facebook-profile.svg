@@ -18,10 +18,20 @@
   <circle cx="145" cy="120" r="10" fill="url(#ga)" stroke="#FFFFFF" stroke-width="0.7" stroke-opacity="0.2"/>
   <circle cx="25" cy="40" r="12" fill="url(#ga)" stroke="#FFFFFF" stroke-width="0.7" stroke-opacity="0.2"/>
 
-  <!-- Water swirl -->
-  <path d="M40 120 Q65 100 85 120 Q105 140 130 120" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" opacity="0.45"/>
-  <path d="M48 132 Q68 116 84 132 Q100 148 120 132" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.2"/>
-
-  <!-- WNF -->
-  <text x="85" y="100" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="900" font-size="48" fill="#FFFFFF">WNF</text>
+  <!-- Washer icon -->
+  <g transform="translate(30,22) scale(0.64)">
+    <rect x="20" y="12" width="136" height="160" rx="16" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    <line x1="20" y1="44" x2="156" y2="44" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="52" cy="29" r="5" fill="none" stroke="#FFFFFF" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="88" cy="29" r="5" fill="none" stroke="#FFFFFF" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="124" cy="29" r="5" fill="none" stroke="#FFFFFF" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="88" cy="110" r="52" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" opacity="0.95"/>
+    <circle cx="88" cy="110" r="46" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.35"/>
+    <circle cx="88" cy="103" r="14" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.6"/>
+    <circle cx="68" cy="92" r="8" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.45"/>
+    <circle cx="110" cy="95" r="7" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.45"/>
+    <circle cx="72" cy="128" r="6" fill="none" stroke="#FFFFFF" stroke-width="1.8" opacity="0.35"/>
+    <path d="M60 140 Q68 132 76 140" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <path d="M96 142 Q104 134 112 142" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  </g>
 </svg>
