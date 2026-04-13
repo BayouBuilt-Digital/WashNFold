@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0F7FF"/>
+      <stop offset="100%" stop-color="#E8F4FD"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#64B5F6"/>
+      <stop offset="100%" stop-color="#7CC444"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Accent bar at top -->
+  <rect width="1200" height="6" fill="url(#accent)"/>
+
+  <!-- Glass bubbles — decorative -->
+  <circle cx="120" cy="480" r="60" fill="#64B5F6" opacity="0.08"/>
+  <circle cx="180" cy="530" r="35" fill="#7CC444" opacity="0.06"/>
+  <circle cx="1050" cy="130" r="70" fill="#7CC444" opacity="0.08"/>
+  <circle cx="1120" cy="200" r="40" fill="#64B5F6" opacity="0.06"/>
+  <circle cx="80" cy="120" r="25" fill="#64B5F6" opacity="0.05"/>
+  <circle cx="1100" cy="500" r="30" fill="#7CC444" opacity="0.05"/>
+
+  <!-- Water swirl accents -->
+  <path d="M0 520 Q150 480 300 520 Q450 560 600 520 Q750 480 900 520 Q1050 560 1200 520" fill="none" stroke="#64B5F6" stroke-width="2" stroke-linecap="round" opacity="0.12"/>
+  <path d="M0 545 Q150 505 300 545 Q450 585 600 545 Q750 505 900 545 Q1050 585 1200 545" fill="none" stroke="#7CC444" stroke-width="1.5" stroke-linecap="round" opacity="0.08"/>
+
+  <!-- "Wash" in dark navy -->
+  <text x="530" y="290" text-anchor="end"
+        font-family="'Nunito', 'Segoe UI', sans-serif" font-weight="800"
+        font-size="96" fill="#1B3A4B">Wash</text>
+
+  <!-- "NFold" in brand green -->
+  <text x="534" y="290" text-anchor="start"
+        font-family="'Nunito', 'Segoe UI', sans-serif" font-weight="800"
+        font-size="96" fill="#7CC444">NFold</text>
+
+  <!-- LAUNDRY subtitle -->
+  <text x="600" y="340" text-anchor="middle"
+        font-family="'Nunito', 'Segoe UI', sans-serif" font-weight="400"
+        font-size="22" letter-spacing="12" fill="#6B7280">LAUNDRY</text>
+
+  <!-- Tagline -->
+  <text x="600" y="410" text-anchor="middle"
+        font-family="'Nunito', 'Segoe UI', sans-serif" font-weight="600"
+        font-size="24" fill="#374151">Pickup &amp; Delivery Laundry Service</text>
+
+  <!-- Location -->
+  <text x="600" y="450" text-anchor="middle"
+        font-family="'Nunito', 'Segoe UI', sans-serif" font-weight="400"
+        font-size="18" fill="#6B7280">Maurice, Louisiana &amp; Vermilion Parish</text>
+
+  <!-- Bottom accent bar -->
+  <rect y="624" width="1200" height="6" fill="url(#accent)"/>
+</svg>
