@@ -72,3 +72,22 @@
 - **Primary CTA**: Brand Green (`#7CC444`) background, white text
 - **Font**: Nunito, 700 weight
 - **Shape**: Rounded
+
+## OG Image (Social Preview)
+
+- **File**: `og-image.png` (1200x630)
+- **Source**: `og-image.svg`
+- Dark navy gradient background (`#0f2a3d` → `#0a1520`)
+- "Wash" in white, "NFold" in brand green (`#7CC444`)
+- Glass bubble decorations + water swirl accents
+- Gradient accent bars top/bottom (`#64B5F6` → `#7CC444`)
+- Location: Maurice, LA · Milton · Lafayette
+
+### Refreshing OG Image Cache
+
+Social platforms cache OG images aggressively. After updating the OG image:
+
+1. **Facebook**: Paste site URL into [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) and click "Scrape Again"
+2. **LinkedIn**: Paste URL into [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)
+3. **Twitter/X**: Paste URL into [Twitter Card Validator](https://cards-dev.twitter.com/validator)
+4. **iMessage / Slack / Discord**: These usually refresh within a few hours, or clear the conversation cache
