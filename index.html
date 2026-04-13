@@ -614,7 +614,7 @@
 
     /* ─── FOOTER ─── */
     footer { background: var(--bg3); border-top: 1px solid var(--border); padding: 52px 60px 28px; }
-    .foot-top { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 44px; margin-bottom: 40px; }
+    .foot-top { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; margin-bottom: 40px; }
     .foot-logo { font-size: 28px; font-weight: 900; margin-bottom: 10px; text-decoration: none; display: block; }
     .foot-logo .w { color: var(--text); }
     .foot-logo .n { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -624,6 +624,9 @@
     .foot-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .foot-links a { color: var(--text2); text-decoration: none; font-size: 13px; font-weight: 600; transition: color 0.2s; }
     .foot-links a:hover { color: var(--blue-mid); }
+    .foot-social { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .foot-social a { display: inline-flex; align-items: center; gap: 8px; color: var(--text2); text-decoration: none; font-size: 13px; font-weight: 700; transition: all 0.2s; }
+    .foot-social a:hover { color: var(--blue-mid); transform: translateX(2px); }
     .foot-hr { height: 1px; background: var(--border); margin: 0 auto 20px; max-width: 960px; }
     .foot-bottom { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     .foot-copy { color: var(--text3); font-size: 12px; font-weight: 600; }
@@ -1487,6 +1490,13 @@
         <li><a href="#how">24–48hr Turnaround</a></li>
         <li><a href="#faq">5-Mile Radius</a></li>
         <li><a href="#booking">Payments via Square</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-t">Follow Us</div>
+      <ul class="foot-social">
+        <li><a href="https://www.facebook.com/WashnFoldMaurice/" target="_blank" rel="noopener">📘 Facebook</a></li>
+        <li><a href="https://www.instagram.com/washnfold" target="_blank" rel="noopener">📷 Instagram</a></li>
       </ul>
     </div>
   </div>
