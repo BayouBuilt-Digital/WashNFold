@@ -67,6 +67,25 @@
   });
 })();
 
+/* ------ PICKUP LOCATION "OTHER" TOGGLE ------ */
+(function () {
+  var sel  = document.getElementById('pickup-location');
+  var wrap = document.getElementById('pickup-other-wrap');
+  var inp  = document.getElementById('pickup-other');
+  if (!sel || !wrap) return;
+
+  sel.addEventListener('change', function () {
+    if (sel.value === 'Other') {
+      wrap.style.display = '';
+      inp.required = true;
+    } else {
+      wrap.style.display = 'none';
+      inp.required = false;
+      inp.value = '';
+    }
+  });
+})();
+
 /* ------ ASYNC FORM SUBMISSION (Formspree) ------
    Usage on any <form>:
      data-form-id="YOUR_FORMSPREE_ID"
