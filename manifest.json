@@ -1,0 +1,18 @@
+{
+  "name": "WashNFold",
+  "short_name": "WashNFold",
+  "description": "Pickup & Delivery Laundry Service — Maurice, LA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFCFF",
+  "theme_color": "#64B5F6",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["business", "lifestyle"]
+}
