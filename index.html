@@ -609,6 +609,65 @@
     .foot-sq { display: flex; align-items: center; gap: 6px; color: var(--text3); font-size: 12px; font-weight: 600; }
 
 
+    /* ─── GIVEAWAY ─── */
+    .giveaway {
+      padding: 100px 60px;
+      background: var(--bg2);
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .giveaway::before { content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:0.5 }
+    .giveaway-orb1 { position:absolute;width:400px;height:400px;top:-100px;right:-80px;background:rgba(124,196,68,0.08);border-radius:50%;filter:blur(80px);pointer-events:none }
+    .giveaway-orb2 { position:absolute;width:300px;height:300px;bottom:-60px;left:-60px;background:rgba(100,181,246,0.07);border-radius:50%;filter:blur(80px);pointer-events:none }
+    .giveaway-card {
+      max-width: 480px; margin: 0 auto; position: relative;
+      background: var(--grad); border-radius: 24px;
+      padding: 44px 32px; text-align: center; overflow: hidden;
+      box-shadow: 0 24px 56px var(--shadow-strong);
+    }
+    .gcb { position:absolute;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2) }
+    .gcb::after { content:'';position:absolute;top:20%;left:20%;width:35%;height:25%;background:rgba(255,255,255,0.25);border-radius:50%;filter:blur(2px) }
+    .gcb1 { width:110px;height:110px;top:-28px;right:-22px }
+    .gcb2 { width:56px;height:56px;bottom:-10px;left:-10px }
+    .giveaway-icon { font-size: 52px; margin-bottom: 16px; position: relative; z-index: 1; }
+    .giveaway-details { display:flex;flex-direction:column;gap:8px;position:relative;z-index:1;margin-bottom:8px }
+    .giveaway-detail { font-size:13px;color:rgba(255,255,255,0.82);font-weight:600;line-height:1.65 }
+    .giveaway-detail strong { color:#fff;font-weight:900 }
+    .giveaway-card .btn-grad {
+      background: rgba(255,255,255,0.2); border: 1.5px solid rgba(255,255,255,0.4);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .giveaway-card .btn-grad:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
+
+    /* Giveaway winner spotlight */
+    .giveaway-winner {
+      max-width: 480px; margin: 0 auto 40px; position: relative; z-index: 1;
+      display: flex; align-items: center; gap: 20px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px; padding: 20px 24px;
+      box-shadow: 0 8px 28px var(--shadow);
+      text-align: left;
+    }
+    .gw-photo {
+      width: 72px; height: 72px; border-radius: 50%; flex-shrink: 0;
+      background: var(--bg2); border: 2px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .gw-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .gw-placeholder { font-size: 28px; }
+    .gw-badge {
+      font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;
+      background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 4px;
+    }
+    .gw-name { font-size: 18px; font-weight: 900; color: var(--text); margin-bottom: 4px; }
+    .gw-text { font-size: 13px; color: var(--text2); font-weight: 600; line-height: 1.5; }
+    @media(max-width:580px) {
+      .giveaway-winner { flex-direction: column; text-align: center; }
+      .giveaway { padding: 72px 20px; }
+    }
+
     /* ─── TESTIMONIALS ─── */
     .testimonials {
       padding: 100px 60px;
@@ -924,17 +983,35 @@
   </section>
 
   <!-- MONTHLY CONTEST CTA -->
-  <section class="contest-cta" id="contest" aria-label="Monthly Laundry Giveaway">
-    <div class="contest-cta-inner">
-      <div class="contest-cta-badge">🎉 Monthly Giveaway</div>
-      <h2 class="section-title" style="color: var(--cream);">Free laundry? <em style="color: var(--gold);">Yes please.</em></h2>
-      <p class="contest-cta-text">Every month we're giving away one free pickup and delivery service (up to ~30 lbs) to one lucky winner. Nominate yourself (no shame) or someone who seriously deserves a break from laundry mountain.</p>
-      <div class="contest-cta-details">
-        <div class="contest-cta-detail"><strong>Enter by:</strong> 9th of each month</div>
-        <div class="contest-cta-detail"><strong>Winner:</strong> Announced by the 16th</div>
-        <div class="contest-cta-detail"><strong>How:</strong> Community vote in app</div>
+  <section class="giveaway" id="contest" aria-label="Monthly Laundry Giveaway">
+    <div class="giveaway-orb1"></div>
+    <div class="giveaway-orb2"></div>
+    <div class="section-eyebrow">Monthly Giveaway</div>
+    <h2 class="section-title">Free laundry? <em style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Yes please.</em></h2>
+    <p class="section-sub" style="margin-bottom:40px">Every month we're giving away one free pickup &amp; delivery service (up to ~30 lbs) to one lucky winner. Nominate yourself (no shame) or someone who seriously deserves a break from laundry mountain.</p>
+
+    <!-- Winner Spotlight -->
+    <div class="giveaway-winner">
+      <div class="gw-photo">
+        <div class="gw-placeholder">🏆</div>
       </div>
-      <a href="contest.html" class="btn" style="margin-top: 1.5rem;">Enter to Win</a>
+      <div class="gw-info">
+        <div class="gw-badge">This Month's Winner</div>
+        <div class="gw-name">To Be Announced</div>
+        <div class="gw-text">Our first winner will be announced by the 16th. Could be you!</div>
+      </div>
+    </div>
+
+    <div class="giveaway-card">
+      <div class="gcb gcb1"></div>
+      <div class="gcb gcb2"></div>
+      <div class="giveaway-icon">🎉</div>
+      <div class="giveaway-details">
+        <div class="giveaway-detail"><strong>Enter by</strong> the 9th of each month</div>
+        <div class="giveaway-detail"><strong>Winner announced</strong> by the 16th</div>
+        <div class="giveaway-detail"><strong>Community vote</strong> decides the winner</div>
+      </div>
+      <a href="contest.html" class="btn-grad" style="margin-top:20px"><span>Enter to Win →</span></a>
     </div>
   </section>
 
