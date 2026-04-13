@@ -102,7 +102,7 @@
       box-shadow: 0 24px 60px var(--shadow-home);
     }
     .contest-winner-photo {
-      width: 160px; height: 160px; border-radius: 50%; flex-shrink: 0;
+      width: 220px; height: 220px; border-radius: 50%; flex-shrink: 0;
       background: var(--bg2-home); border: 3px solid var(--border-home);
       display: flex; align-items: center; justify-content: center;
       overflow: hidden; aspect-ratio: auto;
@@ -233,6 +233,36 @@
       .contest-winner-photo { margin: 0 auto; }
       .contest-footer { padding: 24px 20px; }
     }
+
+    /* ─── OWNER PANEL (hidden) ─── */
+    .owner-gate { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 999; }
+    .owner-gate.open { display: block; }
+    .owner-panel {
+      background: var(--surface-home); border: 1px solid var(--border-home);
+      border-radius: 16px; padding: 24px; width: 320px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+    }
+    .owner-panel h4 { font-size: 14px; font-weight: 900; color: var(--text-home); margin-bottom: 12px; }
+    .owner-panel label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-home); display: block; margin-bottom: 4px; margin-top: 12px; }
+    .owner-panel input, .owner-panel textarea {
+      width: 100%; padding: 9px 11px; border: 1.5px solid var(--border-home); border-radius: 8px;
+      font-family: 'Nunito', sans-serif; font-size: 13px; color: var(--text-home); background: var(--bg2-home);
+    }
+    .owner-panel textarea { resize: vertical; min-height: 60px; }
+    .owner-save {
+      margin-top: 14px; width: 100%; padding: 11px; background: var(--grad-home); color: #fff; border: none;
+      border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 900; cursor: pointer;
+    }
+    .owner-close { position: absolute; top: 10px; right: 14px; background: none; border: none; font-size: 18px; cursor: pointer; color: var(--text3-home); }
+    .owner-trigger {
+      position: fixed; bottom: 20px; right: 20px; z-index: 998;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--grad-home); color: #fff; border: none;
+      font-size: 18px; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0.3; transition: opacity 0.2s;
+    }
+    .owner-trigger:hover { opacity: 1; }
   </style>
 </head>
 <body>
@@ -261,7 +291,7 @@
     <p class="contest-sub">Free laundry? Yes please. Enter by the 9th. Winner by the 16th. Every month.</p>
     <div class="contest-winner-card">
       <div class="contest-winner-photo" id="winner-photo">
-        <div class="contest-winner-placeholder">🏆<br>Winner photo<br>coming soon</div>
+        <div class="contest-winner-placeholder" style="font-size:40px">🏆<br><span style="font-size:14px">Winner photo<br>coming soon</span></div>
       </div>
       <div class="contest-winner-info">
         <div class="contest-winner-badge">🎉 Monthly Winner</div>
@@ -281,7 +311,7 @@
         <div class="contest-step-num">1</div>
         <div>
           <div class="contest-step-title">Nominate Someone (or Yourself)</div>
-          <div class="contest-step-desc">Fill out the entry form below. Tell us about the person you're nominating and why they deserve to win — in short essay form. Self-nominations are totally valid. We get it.</div>
+          <div class="contest-step-desc">Fill out the entry form below. Tell us about the person you're nominating and why they deserve to win — just write from the heart, a few sentences is all it takes. Self-nominations are totally valid. We get it.</div>
         </div>
       </div>
       <div class="contest-step">
@@ -336,9 +366,9 @@
         </div>
 
         <div class="cf-field">
-          <label class="cf-label" for="entry-essay"><span class="num">05</span> Why Should They Win?</label>
-          <div class="cf-hint">Tell us their story in short essay form. Why do they deserve a free laundry day? (Minimum 3-4 sentences)</div>
-          <textarea id="entry-essay" name="essay" rows="6" placeholder="Write about the nominee — their situation, what they mean to the community, and why they deserve this. If entering for yourself, tell us your story." required></textarea>
+          <label class="cf-label" for="entry-essay"><span class="num">05</span> Spill the Tea — Why Them?</label>
+          <div class="cf-hint">Give us the scoop! What makes this person amazing? What's their story? Why do they deserve a break from laundry? Just write from the heart — a few sentences is all it takes.</div>
+          <textarea id="entry-essay" name="essay" rows="6" placeholder="Maybe they're a nurse who works doubles, a dad juggling three kids, or your neighbor who always helps everyone else first. Tell us what makes them special and why they deserve this win." required></textarea>
         </div>
 
         <div class="cf-field">
@@ -380,6 +410,76 @@
     <p>Site by <a href="https://bayoubuilt-digital.com">BayouBuilt Digital</a></p>
   </footer>
 
+  <!-- OWNER-ONLY PANEL (hidden, password-gated) -->
+  <button class="owner-trigger" id="ownerTrigger" title="Owner access">🔒</button>
+  <div class="owner-gate" id="ownerGate">
+    <div class="owner-panel" style="position:relative">
+      <button class="owner-close" id="ownerClose">&times;</button>
+      <h4>🔒 Owner — Update Winner</h4>
+      <label for="owner-pass">Password</label>
+      <input type="password" id="owner-pass" placeholder="Enter owner password" />
+      <div id="owner-fields" style="display:none">
+        <label for="owner-name">Winner Name</label>
+        <input type="text" id="owner-name" placeholder="e.g. Kayla B." />
+        <label for="owner-story">Winner Blurb</label>
+        <textarea id="owner-story" placeholder="Short description about the winner"></textarea>
+        <label for="owner-img">Winner Photo</label>
+        <input type="file" id="owner-img" accept="image/*" />
+        <button class="owner-save" id="ownerSave">Update Winner Spotlight</button>
+      </div>
+    </div>
+  </div>
+
   <script src="main.js"></script>
+  <script>
+  /* ── Owner Panel ── */
+  (function(){
+    var OWNER_PASS = 'washnfold2026';
+    var trigger = document.getElementById('ownerTrigger');
+    var gate = document.getElementById('ownerGate');
+    var close = document.getElementById('ownerClose');
+    var passInput = document.getElementById('owner-pass');
+    var fields = document.getElementById('owner-fields');
+    var save = document.getElementById('ownerSave');
+
+    trigger.addEventListener('click', function(){ gate.classList.toggle('open'); });
+    close.addEventListener('click', function(){ gate.classList.remove('open'); });
+
+    passInput.addEventListener('input', function(){
+      if(passInput.value === OWNER_PASS){
+        fields.style.display = 'block';
+        passInput.style.borderColor = '#7CC444';
+      } else {
+        fields.style.display = 'none';
+        passInput.style.borderColor = '';
+      }
+    });
+
+    save.addEventListener('click', function(){
+      var name = document.getElementById('owner-name').value.trim();
+      var story = document.getElementById('owner-story').value.trim();
+      var imgInput = document.getElementById('owner-img');
+      var photoEl = document.getElementById('winner-photo');
+      var nameEl = document.querySelector('.contest-winner-name');
+      var storyEl = document.querySelector('.contest-winner-story');
+      var badgeEl = document.querySelector('.contest-winner-badge');
+
+      if(name) nameEl.textContent = name;
+      if(story) storyEl.textContent = story;
+      badgeEl.textContent = '🎉 Monthly Winner';
+
+      if(imgInput.files && imgInput.files[0]){
+        var reader = new FileReader();
+        reader.onload = function(e){
+          photoEl.innerHTML = '<img src="' + e.target.result + '" alt="' + (name || 'Contest winner') + '" />';
+        };
+        reader.readAsDataURL(imgInput.files[0]);
+      }
+
+      save.textContent = '✓ Updated!';
+      setTimeout(function(){ save.textContent = 'Update Winner Spotlight'; }, 2000);
+    });
+  })();
+  </script>
 </body>
 </html>
