@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>WashNFold Admin</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#64B5F6">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginScreen">
+  <div class="login-card">
+    <div class="login-logo">Wash<span>NFold</span></div>
+    <div class="login-sub">Admin Dashboard</div>
+    <input type="password" id="loginPass" placeholder="Enter password" autofocus>
+    <button id="loginBtn">Sign In</button>
+    <div class="login-err" id="loginErr"></div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none">
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-brand">Wash<span>NFold</span> <small>Admin</small></div>
+    <div class="nav-tabs">
+      <button class="tab active" data-tab="dashboard">Dashboard</button>
+      <button class="tab" data-tab="scanner">Scanner</button>
+      <button class="tab" data-tab="customers">Customers</button>
+      <button class="tab" data-tab="orders">Orders</button>
+      <button class="tab" data-tab="qrgen">QR Gen</button>
+    </div>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <section id="tab-dashboard" class="panel active">
+    <h2>Overview</h2>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-n" id="statCustomers">0</div><div class="stat-l">Customers</div></div>
+      <div class="stat-card"><div class="stat-n" id="statOrders">0</div><div class="stat-l">Active Orders</div></div>
+      <div class="stat-card"><div class="stat-n" id="statBags">0</div><div class="stat-l">Bags Out</div></div>
+      <div class="stat-card"><div class="stat-n" id="statToday">0</div><div class="stat-l">Today</div></div>
+    </div>
+    <div class="quick-actions">
+      <button onclick="switchTab('scanner')">Scan Bag</button>
+      <button onclick="switchTab('customers')">Add Customer</button>
+      <button onclick="switchTab('orders')">New Order</button>
+      <button onclick="exportData()">Export Data</button>
+      <label class="import-btn">Import Data<input type="file" accept=".json" onchange="importData(event)" hidden></label>
+    </div>
+  </section>
+
+  <!-- SCANNER -->
+  <section id="tab-scanner" class="panel">
+    <h2>Scan Bag QR</h2>
+    <div class="scanner-wrap">
+      <video id="scanVideo" playsinline></video>
+      <canvas id="scanCanvas" hidden></canvas>
+      <div class="scanner-overlay"></div>
+    </div>
+    <button id="scanBtn" onclick="toggleScanner()">Start Camera</button>
+    <div id="scanResult" class="scan-result" style="display:none"></div>
+  </section>
+
+  <!-- CUSTOMERS -->
+  <section id="tab-customers" class="panel">
+    <div class="section-header">
+      <h2>Customers</h2>
+      <button onclick="showCustomerForm()">+ Add Customer</button>
+    </div>
+    <input type="text" id="custSearch" placeholder="Search customers..." oninput="renderCustomers()">
+    <div id="customerList"></div>
+
+    <!-- Customer Form Modal -->
+    <div id="custModal" class="modal" style="display:none">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 id="custFormTitle">Add Customer</h3>
+          <button onclick="closeModal('custModal')">&times;</button>
+        </div>
+        <form id="custForm" onsubmit="saveCustomer(event)">
+          <input type="hidden" id="cf-id">
+          <div class="f-row"><label>Name *</label><input type="text" id="cf-name" required></div>
+          <div class="f-row"><label>Phone *</label><input type="tel" id="cf-phone" required></div>
+          <div class="f-row"><label>Email</label><input type="email" id="cf-email"></div>
+          <div class="f-row"><label>Address *</label><input type="text" id="cf-address" required></div>
+          <div class="f-row2">
+            <div><label>City</label><select id="cf-city"><option>Maurice</option><option>Milton</option><option>Lafayette</option></select></div>
+            <div><label>Zip</label><select id="cf-zip"><option>70555</option><option>70558</option><option>70507</option><option>70508</option></select></div>
+          </div>
+          <div class="f-row"><label>Pickup Day</label><select id="cf-day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option></select></div>
+          <div class="f-row"><label>Pickup Spot</label><select id="cf-spot"><option>Front Door</option><option>Side Door</option><option>Carport</option><option>Other</option></select></div>
+          <div class="f-row"><label>Gate Code / Access</label><input type="text" id="cf-gate"></div>
+          <div class="f-row"><label>Allergies</label><input type="text" id="cf-allergies"></div>
+          <div class="f-row"><label>Special Notes</label><textarea id="cf-notes" rows="2"></textarea></div>
+          <button type="submit" class="btn-grad">Save Customer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDERS -->
+  <section id="tab-orders" class="panel">
+    <div class="section-header">
+      <h2>Orders</h2>
+      <button onclick="showOrderForm()">+ New Order</button>
+    </div>
+    <div class="order-filters">
+      <button class="of active" data-filter="all" onclick="filterOrders('all',this)">All</button>
+      <button class="of" data-filter="Scheduled" onclick="filterOrders('Scheduled',this)">Scheduled</button>
+      <button class="of" data-filter="Picked Up" onclick="filterOrders('Picked Up',this)">Picked Up</button>
+      <button class="of" data-filter="Washing" onclick="filterOrders('Washing',this)">Washing</button>
+      <button class="of" data-filter="Folding" onclick="filterOrders('Folding',this)">Folding</button>
+      <button class="of" data-filter="Out for Delivery" onclick="filterOrders('Out for Delivery',this)">Delivering</button>
+      <button class="of" data-filter="Delivered" onclick="filterOrders('Delivered',this)">Done</button>
+    </div>
+    <div id="orderList"></div>
+
+    <!-- Order Form Modal -->
+    <div id="orderModal" class="modal" style="display:none">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>New Order</h3>
+          <button onclick="closeModal('orderModal')">&times;</button>
+        </div>
+        <form onsubmit="saveOrder(event)">
+          <div class="f-row"><label>Customer *</label><select id="of-cust" required></select></div>
+          <div class="f-row2">
+            <div><label>Bags</label><input type="number" id="of-bags" value="1" min="1" max="5"></div>
+            <div><label>Pickup Date</label><input type="date" id="of-date"></div>
+          </div>
+          <div class="f-row"><label>Pickup Time</label><select id="of-time"><option>7:00 AM</option><option>7:30 AM</option><option>8:00 AM</option><option>8:30 AM</option><option>9:00 AM</option></select></div>
+          <div class="f-row"><label>Notes</label><input type="text" id="of-notes" placeholder="Any special instructions"></div>
+          <button type="submit" class="btn-grad">Create Order</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- QR GENERATOR -->
+  <section id="tab-qrgen" class="panel">
+    <h2>Generate Bag QR</h2>
+    <div class="qr-form">
+      <div class="f-row"><label>Customer</label><select id="qr-cust"></select></div>
+      <div class="f-row"><label>Bag ID</label>
+        <div class="f-row2">
+          <input type="text" id="qr-bagid" placeholder="WNF-001" style="flex:1">
+          <button type="button" onclick="autoGenBagId()">Auto</button>
+        </div>
+      </div>
+      <button onclick="generateQR()" class="btn-grad">Generate QR Code</button>
+    </div>
+    <div id="qrOutput" style="display:none">
+      <div id="qrImage"></div>
+      <div id="qrInfo"></div>
+      <button onclick="printQR()">Print QR</button>
+    </div>
+  </section>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
