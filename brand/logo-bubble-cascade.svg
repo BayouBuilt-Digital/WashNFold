@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" width="560" height="280">
   <!-- Logo Option B: Cascading bubbles rising from bottom-right -->
+  <!-- FOR: White shirts, natural cotton bags -->
 
   <defs>
-    <radialGradient id="bubble-glass" cx="35%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45"/>
-      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.15"/>
-      <stop offset="70%" stop-color="#64B5F6" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#7CC444" stop-opacity="0.04"/>
+    <radialGradient id="bubble-b" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#64B5F6" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#7CC444" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#7CC444" stop-opacity="0.03"/>
     </radialGradient>
   </defs>
 
@@ -18,26 +18,22 @@
         font-family="'Nunito', sans-serif" font-weight="900"
         font-size="80" fill="#7CC444">NFold</text>
 
-  <!-- Cascading bubbles — rising from bottom-right to top-left -->
-  <!-- Large -->
-  <circle cx="420" cy="160" r="38" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-  <ellipse cx="407" cy="145" rx="11" ry="7" fill="#FFFFFF" opacity="0.3" transform="rotate(-20,407,145)"/>
-  <circle cx="402" cy="139" r="3" fill="#FFFFFF" opacity="0.45"/>
+  <!-- Cascading bubbles — rising from bottom-right -->
+  <circle cx="420" cy="160" r="38" fill="url(#bubble-b)" stroke="#7CC444" stroke-width="2" stroke-opacity="0.45"/>
+  <ellipse cx="407" cy="145" rx="11" ry="7" fill="#7CC444" opacity="0.1" transform="rotate(-20,407,145)"/>
+  <circle cx="402" cy="139" r="3" fill="#7CC444" opacity="0.2"/>
 
-  <!-- Medium -->
-  <circle cx="370" cy="90" r="26" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
-  <ellipse cx="361" cy="80" rx="7.5" ry="5" fill="#FFFFFF" opacity="0.28" transform="rotate(-18,361,80)"/>
-  <circle cx="357" cy="76" r="2.5" fill="#FFFFFF" opacity="0.4"/>
+  <circle cx="370" cy="90" r="26" fill="url(#bubble-b)" stroke="#64B5F6" stroke-width="1.5" stroke-opacity="0.4"/>
+  <ellipse cx="361" cy="80" rx="7.5" ry="5" fill="#64B5F6" opacity="0.1" transform="rotate(-18,361,80)"/>
+  <circle cx="357" cy="76" r="2.5" fill="#64B5F6" opacity="0.2"/>
 
-  <!-- Small -->
-  <circle cx="440" cy="70" r="16" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-  <ellipse cx="435" cy="64" rx="4.5" ry="3" fill="#FFFFFF" opacity="0.22" transform="rotate(-15,435,64)"/>
+  <circle cx="440" cy="70" r="16" fill="url(#bubble-b)" stroke="#7CC444" stroke-width="1.2" stroke-opacity="0.35"/>
+  <ellipse cx="435" cy="64" rx="4.5" ry="3" fill="#7CC444" opacity="0.08" transform="rotate(-15,435,64)"/>
 
-  <!-- Tiny -->
-  <circle cx="460" cy="110" r="10" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
-  <circle cx="350" cy="150" r="12" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
-  <circle cx="475" cy="50" r="7" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
-  <circle cx="395" cy="40" r="5" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.15)" stroke-width="0.6"/>
+  <circle cx="460" cy="110" r="10" fill="url(#bubble-b)" stroke="#64B5F6" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="350" cy="150" r="12" fill="url(#bubble-b)" stroke="#7CC444" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="475" cy="50" r="7" fill="url(#bubble-b)" stroke="#64B5F6" stroke-width="0.8" stroke-opacity="0.25"/>
+  <circle cx="395" cy="40" r="5" fill="url(#bubble-b)" stroke="#7CC444" stroke-width="0.7" stroke-opacity="0.2"/>
 
   <!-- Subtitle -->
   <text x="280" y="170" text-anchor="middle"

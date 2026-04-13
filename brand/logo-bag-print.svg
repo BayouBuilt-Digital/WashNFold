@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
-  <!-- WashNFold — Bag Print Layout (centered, large, print-ready) -->
+  <!-- WashNFold — Bag Print Layout -->
+  <!-- FOR: White shirts, natural cotton bags -->
   <!-- Designed for reusable laundry bags -->
 
   <defs>
@@ -12,15 +13,15 @@
   <!-- Large icon mark -->
   <rect x="150" y="30" width="200" height="200" rx="44" fill="url(#mark-bg)"/>
   <!-- Glass bubbles -->
-  <circle cx="304" cy="62" r="15" fill="#fff" opacity="0.25"/>
-  <circle cx="326" cy="88" r="9" fill="#fff" opacity="0.18"/>
-  <circle cx="172" cy="188" r="14" fill="#fff" opacity="0.2"/>
-  <circle cx="192" cy="210" r="7" fill="#fff" opacity="0.12"/>
-  <circle cx="296" cy="202" r="10" fill="#fff" opacity="0.15"/>
-  <circle cx="172" cy="62" r="11" fill="#fff" opacity="0.1"/>
+  <circle cx="304" cy="62" r="15" fill="#64B5F6" opacity="0.12"/>
+  <circle cx="326" cy="88" r="9" fill="#7CC444" opacity="0.1"/>
+  <circle cx="172" cy="188" r="14" fill="#64B5F6" opacity="0.1"/>
+  <circle cx="192" cy="210" r="7" fill="#7CC444" opacity="0.08"/>
+  <circle cx="296" cy="202" r="10" fill="#64B5F6" opacity="0.08"/>
+  <circle cx="172" cy="62" r="11" fill="#7CC444" opacity="0.06"/>
   <!-- Water swirl -->
-  <path d="M182 182 Q218 152 250 182 Q282 212 318 182" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
-  <path d="M194 198 Q222 174 248 198 Q274 222 302 198" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
+  <path d="M182 182 Q218 152 250 182 Q282 212 318 182" fill="none" stroke="#64B5F6" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+  <path d="M194 198 Q222 174 248 198 Q274 222 302 198" fill="none" stroke="#64B5F6" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
   <!-- WNF -->
   <text x="250" y="158" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="900" font-size="62" fill="#FFFFFF">WNF</text>
 
