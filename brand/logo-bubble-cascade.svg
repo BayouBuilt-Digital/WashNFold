@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280" width="500" height="280">
+  <!-- Logo Option B: Cascading bubbles rising from bottom-right -->
+
+  <defs>
+    <radialGradient id="bubble-glass" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="#64B5F6" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#7CC444" stop-opacity="0.04"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Wordmark -->
+  <text x="210" y="130" text-anchor="end"
+        font-family="Arial, Helvetica, sans-serif" font-weight="900"
+        font-size="80" fill="#1B3A4B">Wash</text>
+  <text x="214" y="130" text-anchor="start"
+        font-family="Arial, Helvetica, sans-serif" font-weight="900"
+        font-size="80" fill="#7CC444">NFold</text>
+
+  <!-- Cascading bubbles — rising from bottom-right to top-left -->
+  <!-- Large -->
+  <circle cx="420" cy="160" r="38" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  <ellipse cx="407" cy="145" rx="11" ry="7" fill="#FFFFFF" opacity="0.3" transform="rotate(-20,407,145)"/>
+  <circle cx="402" cy="139" r="3" fill="#FFFFFF" opacity="0.45"/>
+
+  <!-- Medium -->
+  <circle cx="370" cy="90" r="26" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
+  <ellipse cx="361" cy="80" rx="7.5" ry="5" fill="#FFFFFF" opacity="0.28" transform="rotate(-18,361,80)"/>
+  <circle cx="357" cy="76" r="2.5" fill="#FFFFFF" opacity="0.4"/>
+
+  <!-- Small -->
+  <circle cx="440" cy="70" r="16" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <ellipse cx="435" cy="64" rx="4.5" ry="3" fill="#FFFFFF" opacity="0.22" transform="rotate(-15,435,64)"/>
+
+  <!-- Tiny -->
+  <circle cx="460" cy="110" r="10" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+  <circle cx="350" cy="150" r="12" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+  <circle cx="475" cy="50" r="7" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+  <circle cx="395" cy="40" r="5" fill="url(#bubble-glass)" stroke="rgba(255,255,255,0.15)" stroke-width="0.6"/>
+
+  <!-- Subtitle -->
+  <text x="250" y="170" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="400"
+        font-size="18" letter-spacing="12" fill="#6B7280">LAUNDRY</text>
+
+  <text x="250" y="210" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="700"
+        font-size="12" letter-spacing="3" fill="#3BA0B5">PICKUP &amp; DELIVERY · MAURICE, LA</text>
+
+  <text x="250" y="250" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="800"
+        font-size="11" letter-spacing="2.5" fill="#1B3A4B">DIRTY CLOTHES OUT · CLEAN CLOTHES IN</text>
+</svg>
