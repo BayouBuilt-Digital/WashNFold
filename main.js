@@ -77,7 +77,7 @@
   var cityZips = {
     'Maurice': ['70555'],
     'Milton': ['70558'],
-    'Lafayette': ['70501', '70503', '70506', '70507', '70508']
+    'Lafayette': ['70507', '70508']
   };
 
   city.addEventListener('change', function () {
