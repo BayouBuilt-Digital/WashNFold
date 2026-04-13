@@ -1,58 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F0F7FF"/>
-      <stop offset="100%" stop-color="#E8F4FD"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#64B5F6"/>
       <stop offset="100%" stop-color="#7CC444"/>
     </linearGradient>
+    <linearGradient id="darkbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2a3d"/>
+      <stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Dark background -->
+  <rect width="1200" height="630" fill="url(#darkbg)"/>
 
-  <!-- Accent bar at top -->
-  <rect width="1200" height="6" fill="url(#accent)"/>
+  <!-- Gradient accent bar top -->
+  <rect width="1200" height="5" fill="url(#bg)"/>
 
-  <!-- Glass bubbles — decorative -->
-  <circle cx="120" cy="480" r="60" fill="#64B5F6" opacity="0.08"/>
-  <circle cx="180" cy="530" r="35" fill="#7CC444" opacity="0.06"/>
-  <circle cx="1050" cy="130" r="70" fill="#7CC444" opacity="0.08"/>
-  <circle cx="1120" cy="200" r="40" fill="#64B5F6" opacity="0.06"/>
-  <circle cx="80" cy="120" r="25" fill="#64B5F6" opacity="0.05"/>
-  <circle cx="1100" cy="500" r="30" fill="#7CC444" opacity="0.05"/>
+  <!-- Large decorative gradient orb -->
+  <circle cx="900" cy="200" r="300" fill="#64B5F6" opacity="0.06"/>
+  <circle cx="300" cy="450" r="250" fill="#7CC444" opacity="0.05"/>
+
+  <!-- Glass bubbles -->
+  <circle cx="150" cy="120" r="40" fill="#64B5F6" opacity="0.12"/>
+  <circle cx="200" cy="170" r="20" fill="#7CC444" opacity="0.08"/>
+  <circle cx="1020" cy="480" r="50" fill="#7CC444" opacity="0.1"/>
+  <circle cx="1080" cy="530" r="25" fill="#64B5F6" opacity="0.08"/>
+  <circle cx="950" cy="100" r="30" fill="#64B5F6" opacity="0.07"/>
+  <circle cx="100" cy="500" r="35" fill="#7CC444" opacity="0.06"/>
 
   <!-- Water swirl accents -->
-  <path d="M0 520 Q150 480 300 520 Q450 560 600 520 Q750 480 900 520 Q1050 560 1200 520" fill="none" stroke="#64B5F6" stroke-width="2" stroke-linecap="round" opacity="0.12"/>
-  <path d="M0 545 Q150 505 300 545 Q450 585 600 545 Q750 505 900 545 Q1050 585 1200 545" fill="none" stroke="#7CC444" stroke-width="1.5" stroke-linecap="round" opacity="0.08"/>
+  <path d="M0 530 Q200 490 400 530 Q600 570 800 530 Q1000 490 1200 530" fill="none" stroke="#64B5F6" stroke-width="2" stroke-linecap="round" opacity="0.15"/>
+  <path d="M0 555 Q200 515 400 555 Q600 595 800 555 Q1000 515 1200 555" fill="none" stroke="#7CC444" stroke-width="1.5" stroke-linecap="round" opacity="0.1"/>
 
-  <!-- "Wash" in dark navy -->
-  <text x="530" y="290" text-anchor="end"
-        font-family="'Nunito', 'Segoe UI', sans-serif" font-weight="800"
-        font-size="96" fill="#1B3A4B">Wash</text>
+  <!-- "Wash" in white -->
+  <text x="528" y="280" text-anchor="end"
+        font-family="Arial, Helvetica, sans-serif" font-weight="900"
+        font-size="100" fill="#FFFFFF">Wash</text>
 
   <!-- "NFold" in brand green -->
-  <text x="534" y="290" text-anchor="start"
-        font-family="'Nunito', 'Segoe UI', sans-serif" font-weight="800"
-        font-size="96" fill="#7CC444">NFold</text>
+  <text x="534" y="280" text-anchor="start"
+        font-family="Arial, Helvetica, sans-serif" font-weight="900"
+        font-size="100" fill="#7CC444">NFold</text>
 
   <!-- LAUNDRY subtitle -->
-  <text x="600" y="340" text-anchor="middle"
-        font-family="'Nunito', 'Segoe UI', sans-serif" font-weight="400"
-        font-size="22" letter-spacing="12" fill="#6B7280">LAUNDRY</text>
+  <text x="600" y="330" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="400"
+        font-size="20" letter-spacing="14" fill="#6B7280">LAUNDRY</text>
+
+  <!-- Divider line -->
+  <rect x="500" y="360" width="200" height="2" rx="1" fill="url(#bg)" opacity="0.5"/>
 
   <!-- Tagline -->
-  <text x="600" y="410" text-anchor="middle"
-        font-family="'Nunito', 'Segoe UI', sans-serif" font-weight="600"
-        font-size="24" fill="#374151">Pickup &amp; Delivery Laundry Service</text>
+  <text x="600" y="405" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="700"
+        font-size="26" fill="rgba(255,255,255,0.85)">Pickup &amp; Delivery Laundry Service</text>
 
   <!-- Location -->
-  <text x="600" y="450" text-anchor="middle"
-        font-family="'Nunito', 'Segoe UI', sans-serif" font-weight="400"
-        font-size="18" fill="#6B7280">Maurice, Louisiana &amp; Vermilion Parish</text>
+  <text x="600" y="445" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="400"
+        font-size="18" fill="rgba(255,255,255,0.5)">Maurice, LA  ·  Milton  ·  Lafayette</text>
 
-  <!-- Bottom accent bar -->
-  <rect y="624" width="1200" height="6" fill="url(#accent)"/>
+  <!-- Gradient accent bar bottom -->
+  <rect y="625" width="1200" height="5" fill="url(#bg)"/>
 </svg>
