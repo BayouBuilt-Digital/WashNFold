@@ -608,6 +608,99 @@ section {
 
 .notify-input::placeholder { color: rgba(248,249,250,0.3); }
 
+/* PICKUP DETAILS */
+.pickup-details-bg {
+    background: var(--navy);
+    padding: 6rem 2rem;
+    border-top: 3px solid var(--gold);
+}
+
+.pickup-details-inner {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.pickup-form {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.pickup-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.pickup-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream);
+}
+
+.pickup-input {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(124,196,68,0.35);
+    color: var(--cream);
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    outline: none;
+    transition: border-color 0.25s, background 0.25s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pickup-input:focus {
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.08);
+}
+
+.pickup-input::placeholder {
+    color: rgba(248,249,250,0.25);
+}
+
+.pickup-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237CC444' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    cursor: pointer;
+}
+
+.pickup-select option {
+    background: var(--navy);
+    color: var(--cream);
+}
+
+.pickup-textarea {
+    resize: vertical;
+    min-height: 80px;
+    line-height: 1.7;
+}
+
+.pickup-details-bg .section-title,
+.pickup-details-bg .section-label {
+    color: var(--cream);
+}
+
+.pickup-details-bg .section-title em {
+    color: var(--gold);
+}
+
+.pickup-details-bg .section-text {
+    color: rgba(248,249,250,0.7);
+}
+
+.pickup-details-bg .btn {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+
 /* SQUARE SCHEDULE */
 .square-schedule-bg {
     background: var(--cream-dark);

@@ -221,6 +221,54 @@
     </div>
   </div>
 
+  <!-- PICKUP DETAILS -->
+  <div class="pickup-details-bg">
+    <div class="pickup-details-inner">
+      <div class="section-label">Pickup Details</div>
+      <h2 class="section-title">Tell us where <em>&amp; what to know.</em></h2>
+      <p class="section-text">Let us know where to grab your laundry and any details that help us serve you better.</p>
+
+      <form class="pickup-form" data-form-id="YOUR_PICKUP_FORM_ID" onsubmit="handleFormSubmit(event, 'pickup-submit-btn', 'Details saved — thank you!')">
+
+        <!-- Pickup Location -->
+        <div class="pickup-field">
+          <label class="pickup-label" for="pickup-location">Pickup Location</label>
+          <select class="pickup-input pickup-select" id="pickup-location" name="pickup_location" required>
+            <option value="" disabled selected>Where should we pick up?</option>
+            <option value="Front Door">Front Door</option>
+            <option value="Side Door">Side Door</option>
+            <option value="Carport">Carport</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <!-- Other — visible when "Other" is selected -->
+        <div class="pickup-field pickup-other-field" id="pickup-other-wrap" style="display:none;">
+          <label class="pickup-label" for="pickup-other">Describe Location</label>
+          <input class="pickup-input" type="text" id="pickup-other" name="pickup_location_other" placeholder="e.g. Back porch, garage, etc." />
+        </div>
+
+        <!-- Special Instructions -->
+        <div class="pickup-field">
+          <label class="pickup-label" for="pickup-gate">Gate Code / Access Instructions</label>
+          <input class="pickup-input" type="text" id="pickup-gate" name="gate_code" placeholder="Gate code, lock box, key under mat, etc." />
+        </div>
+
+        <div class="pickup-field">
+          <label class="pickup-label" for="pickup-allergies">Allergies or Sensitivities</label>
+          <input class="pickup-input" type="text" id="pickup-allergies" name="allergies" placeholder="Fragrance-free, hypoallergenic, specific detergent, etc." />
+        </div>
+
+        <div class="pickup-field">
+          <label class="pickup-label" for="pickup-notes">Anything Else We Should Know?</label>
+          <textarea class="pickup-input pickup-textarea" id="pickup-notes" name="special_notes" rows="3" placeholder="Pets in yard, preferred drop-off spot, special items, etc."></textarea>
+        </div>
+
+        <button type="submit" id="pickup-submit-btn" class="btn">Save Pickup Details</button>
+      </form>
+    </div>
+  </div>
+
   <!-- SCHEDULE -->
   <div class="square-schedule-bg">
     <div class="square-schedule-inner">
@@ -235,7 +283,7 @@
           width="100%"
           height="750"
           frameborder="0"
-          title="Schedule a Pickup — FreshNFold Laundry"
+          title="Schedule a Pickup — WashNFold Laundry"
           allow="payment"
         ></iframe>
       </div>
