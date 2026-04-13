@@ -24,5 +24,5 @@
   <path d="M52 156 Q76 136 98 156 Q120 176 144 156" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
   <!-- WNF -->
-  <text x="100" y="118" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="58" fill="#FFFFFF">WNF</text>
+  <text x="100" y="118" text-anchor="middle" font-family="'Nunito', sans-serif" font-weight="900" font-size="58" fill="#FFFFFF">WNF</text>
 </svg>
