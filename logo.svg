@@ -2,10 +2,10 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&amp;display=swap');
   </style>
-  <!-- "Wash" in sky blue -->
+  <!-- "Wash" in dark navy -->
   <text x="158" y="62" text-anchor="end"
         font-family="'Nunito', sans-serif" font-weight="800"
-        font-size="54" fill="#64B5F6">Wash</text>
+        font-size="54" fill="#1B3A4B">Wash</text>
   <!-- "NFold" in brand green -->
   <text x="160" y="62" text-anchor="start"
         font-family="'Nunito', sans-serif" font-weight="800"
