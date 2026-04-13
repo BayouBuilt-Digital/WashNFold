@@ -256,9 +256,56 @@
 
       <form class="pickup-form" aria-label="Pickup details" data-form-id="YOUR_PICKUP_FORM_ID" onsubmit="handleFormSubmit(event, 'pickup-submit-btn', 'Details saved — thank you!')">
 
+        <!-- Pickup Address -->
+        <div class="pickup-field">
+          <label class="pickup-label" for="pickup-street">Street Address</label>
+          <input class="pickup-input" type="text" id="pickup-street" name="street_address" placeholder="123 Main St" required />
+        </div>
+
+        <div class="pickup-field">
+          <label class="pickup-label" for="pickup-city">City</label>
+          <select class="pickup-input pickup-select" id="pickup-city" name="city" required>
+            <option value="" disabled selected>Select your city</option>
+            <option value="Maurice">Maurice</option>
+            <option value="Abbeville">Abbeville</option>
+            <option value="Milton">Milton</option>
+            <option value="Lafayette">Lafayette</option>
+          </select>
+        </div>
+
+        <div class="pickup-field">
+          <label class="pickup-label" for="pickup-state">State</label>
+          <select class="pickup-input pickup-select" id="pickup-state" name="state">
+            <option value="LA" selected>Louisiana</option>
+          </select>
+        </div>
+
+        <div class="pickup-field">
+          <label class="pickup-label" for="pickup-zip">Zip Code</label>
+          <select class="pickup-input pickup-select" id="pickup-zip" name="zip_code" required>
+            <option value="" disabled selected>Select zip code</option>
+            <optgroup label="Maurice">
+              <option value="70555">70555 — Maurice</option>
+            </optgroup>
+            <optgroup label="Abbeville">
+              <option value="70510">70510 — Abbeville</option>
+            </optgroup>
+            <optgroup label="Milton">
+              <option value="70558">70558 — Milton</option>
+            </optgroup>
+            <optgroup label="Lafayette">
+              <option value="70501">70501 — Lafayette</option>
+              <option value="70503">70503 — Lafayette</option>
+              <option value="70506">70506 — Lafayette</option>
+              <option value="70507">70507 — Lafayette</option>
+              <option value="70508">70508 — Lafayette</option>
+            </optgroup>
+          </select>
+        </div>
+
         <!-- Pickup Location -->
         <div class="pickup-field">
-          <label class="pickup-label" for="pickup-location">Pickup Location</label>
+          <label class="pickup-label" for="pickup-location">Where Should We Pick Up?</label>
           <select class="pickup-input pickup-select" id="pickup-location" name="pickup_location" required>
             <option value="" disabled selected>Where should we pick up?</option>
             <option value="Front Door">Front Door</option>
